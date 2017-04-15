@@ -14,4 +14,29 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
+//= require bootstrap-slider
 //= require_tree .
+
+$(document).ready(function(){
+
+//palate_structures AJAX
+	$("#change").change(function() {
+		var tannin = document.getElementById("tannin").value;
+		var acid = document.getElementById("acid").value;
+		var alcohol = document.getElementById("alcohol").value;
+		var body = document.getElementById("body").value;
+
+		$.ajax({
+		    type: "GET",
+		    url: "/palate_structures",
+		    data: { tannin: tannin, acid: acid, alcohol: alcohol, body: body },
+		    success: function (data) {
+		    	console.log(data);
+		        //$("#possible").empty();
+		        //$("#possible").append();
+		    }
+		});
+	});
+
+
+})

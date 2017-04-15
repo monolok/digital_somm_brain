@@ -5,13 +5,57 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-sm-6 well well-lg">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error repellat ipsa, magnam, impedit quidem quas maxime illo deleniti deserunt earum debitis placeat commodi expedita voluptatibus, doloribus quo reiciendis voluptas dignissimos!
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia sunt, nulla voluptatem dolor quasi laboriosam, nemo ad, libero quibusdam deleniti odit dicta rem ex qui! Libero fugiat, ad reprehenderit placeat!
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro eaque, quo blanditiis! Cum perferendis aliquam, ut architecto sit doloribus placeat quod, veniam explicabo, sapiente tenetur nam eligendi quis sunt amet.
+		<div id="change" class="col-sm-6 well well-lg">
+			<h3>AJAX request structure</h3>
+<!-- 			<p>Sweetness</p>
+			<p>Phenolic / Bitter (White)</p> -->
+			<p>Tannin (Red)</p>
+			<input id="tannin" type="text"
+              	data-provide="slider"
+            	data-slider-ticks="[1, 2, 3, 4, 5]"
+              	data-slider-ticks-labels='["low", "med-", "med", "med+", "high"]'
+              	data-slider-min="1"
+              	data-slider-max="5"
+              	data-slider-step="1"
+              	data-slider-tooltip="hide" />
+
+			<p>Acid</p>
+			<input id="acid" type="text"
+              	data-provide="slider"
+            	data-slider-ticks="[1, 2, 3, 4, 5]"
+              	data-slider-ticks-labels='["low", "med-", "med", "med+", "high"]'
+              	data-slider-min="1"
+              	data-slider-max="5"
+              	data-slider-step="1"
+              	data-slider-tooltip="hide" />
+
+			<p>Alcohol</p>
+			<input id="alcohol" type="text"
+              	data-provide="slider"
+            	data-slider-ticks="[1, 2, 3, 4, 5]"
+              	data-slider-ticks-labels='["low", "med-", "med", "med+", "high"]'
+              	data-slider-min="1"
+              	data-slider-max="5"
+              	data-slider-step="1"
+              	data-slider-tooltip="hide" />
+
+			<p>Body</p>
+			<input id="body" type="text"
+              	data-provide="slider"
+            	data-slider-ticks="[1, 2, 3, 4, 5]"
+              	data-slider-ticks-labels='["low", "med-", "med", "med+", "high"]'
+              	data-slider-min="1"
+              	data-slider-max="5"
+              	data-slider-step="1"
+              	data-slider-tooltip="hide" />
+<!-- 			<p>Texture</p>
+			<p>Balance</p>
+			<p>Length / Finish</p>
+			<p>Complexity</p> -->
 		</div>
 		<div class="col-sm-6 text-center">
-			<ul class="list-unstyled">
+			<ul id="possible" class="list-unstyled">
+				<li>Showing diff testable AJAX</li>
 				<li>wine 1</li>
 				<li>wine 2</li>
 				<li>wine 3</li>
