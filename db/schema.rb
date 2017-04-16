@@ -10,49 +10,69 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170415155805) do
+ActiveRecord::Schema.define(version: 20170416171136) do
 
   create_table "grapes", force: :cascade do |t|
     t.string   "name"
     t.string   "climate"
     t.string   "world"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
-    t.integer  "sight_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "grapes_noses", force: :cascade do |t|
+    t.integer  "grape_id"
     t.integer  "nose_id"
-    t.integer  "palate_flavors_id"
-    t.integer  "palate_structures_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "grapes_palate_flavors", force: :cascade do |t|
+    t.integer  "grape_id"
+    t.integer  "palate_flavor_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  create_table "grapes_palate_structures", force: :cascade do |t|
+    t.integer  "grape_id"
+    t.integer  "palate_structure_id"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
+  create_table "grapes_sights", force: :cascade do |t|
+    t.integer  "grape_id"
+    t.integer  "sight_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "noses", force: :cascade do |t|
-    t.string   "intensity"
+    t.integer  "intensity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "grape_id"
   end
 
   create_table "palate_flavors", force: :cascade do |t|
-    t.string   "fruit"
+    t.integer  "fruit"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "grape_id"
   end
 
   create_table "palate_structures", force: :cascade do |t|
-    t.string   "body"
+    t.integer  "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "grape_id"
-    t.string   "alcohol"
-    t.string   "acid"
-    t.string   "tannin"
+    t.integer  "alcohol"
+    t.integer  "acid"
+    t.integer  "tannin"
   end
 
   create_table "sights", force: :cascade do |t|
-    t.string   "color"
+    t.integer  "color"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "grape_id"
   end
 
   create_table "testables", force: :cascade do |t|

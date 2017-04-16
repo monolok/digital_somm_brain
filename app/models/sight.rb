@@ -1,3 +1,3 @@
 class Sight < ApplicationRecord
-	has_many :grapes
+	has_and_belongs_to_many :grapes
 end
