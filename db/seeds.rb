@@ -51,9 +51,9 @@
 nebbiolo = Grape.create(name: "Nebbiolo")
 	#Barolo
 		Testable.create(name: "Barolo", grape_id: nebbiolo.id)
-		#minimum palate_structure
-		ps_x = PalateStructure.create(body: (4..5), alcohol: (4..5), acid: (4..5), tannin: (4..5)) #ps_x.include?(5) or ps_x.include?(4) both return true
-		nebbiolo.palate_structures << ps_x
+		#barolo_structure.include?(5) or barolo_structure.include?(4) both return true
+		barolo_structure = PalateStructure.create(body: (4..5), alcohol: (4..5), acid: (4..5), tannin: (4..5))
+		nebbiolo.palate_structures << barolo_structure
 
 	#Barbaresco
 	#Gattinara (normale & riserva)
@@ -63,8 +63,8 @@ pn = Grape.create(name: "Pinot Noir")
 	#Côte d'Or
 		Testable.create(name: "Côte d'Or", grape_id: pn.id)
 		#minimum palate_structure
-		ps_y = PalateStructure.create(body: 3, alcohol: 3, acid: 4, tannin: 2)
-		pn.palate_structures << ps_y
+		cote_dor_structure = PalateStructure.create(body: (2..3), alcohol: (2..4), acid: (4..5), tannin: (2..3))
+		pn.palate_structures << cote_dor_structure
 
 	#California (Anderson valley, Carneros, Central coast, Sonoma coast/valley)
 	#Oregon (Willamette valley)
