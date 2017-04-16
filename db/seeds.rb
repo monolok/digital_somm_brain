@@ -52,7 +52,7 @@ nebbiolo = Grape.create(name: "Nebbiolo")
 	#Barolo
 		Testable.create(name: "Barolo", grape_id: nebbiolo.id)
 		#minimum palate_structure
-		ps_x = PalateStructure.create(body: (4..5), alcohol: 4, acid: 4, tannin: 4)
+		ps_x = PalateStructure.create(body: (4..5), alcohol: (4..5), acid: (4..5), tannin: (4..5)) #ps_x.include?(5) or ps_x.include?(4) both return true
 		nebbiolo.palate_structures << ps_x
 
 	#Barbaresco

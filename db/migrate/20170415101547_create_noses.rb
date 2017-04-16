@@ -1,7 +1,7 @@
 class CreateNoses < ActiveRecord::Migration[5.0]
   def change
     create_table :noses do |t|
-      t.integer :intensity
+      t.text :intensity
 
       t.timestamps
     end

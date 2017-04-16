@@ -49,37 +49,37 @@ ActiveRecord::Schema.define(version: 20170416171136) do
   end
 
   create_table "noses", force: :cascade do |t|
-    t.integer  "intensity"
+    t.text     "intensity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "palate_flavors", force: :cascade do |t|
-    t.integer  "fruit"
+    t.text     "fruit"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "palate_structures", force: :cascade do |t|
-    t.integer  "body"
+    t.text     "body"
+    t.text     "alcohol"
+    t.text     "acid"
+    t.text     "tannin"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "alcohol"
-    t.integer  "acid"
-    t.integer  "tannin"
   end
 
   create_table "sights", force: :cascade do |t|
-    t.integer  "color"
+    t.text     "color"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "testables", force: :cascade do |t|
     t.string   "name"
+    t.integer  "grape_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "grape_id"
   end
 
 end
