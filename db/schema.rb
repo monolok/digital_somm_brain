@@ -56,8 +56,13 @@ ActiveRecord::Schema.define(version: 20170416171136) do
 
   create_table "palate_flavors", force: :cascade do |t|
     t.text     "fruit"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.text     "fruit_character"
+    t.text     "non_fruit"
+    t.text     "organic_earth"
+    t.text     "inorganic_earth"
+    t.text     "wood"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "palate_structures", force: :cascade do |t|
