@@ -11,6 +11,8 @@ def palate_structures
 	@structure["alcohol"] = params["alcohol"]
 	@structure["body"] = params["body"]
 
+	@structure["palate_flavors"] = params["palate_flavors"]
+
 	render json: @structure 
 end
 

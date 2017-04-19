@@ -6,7 +6,219 @@
 	</div>
 	<div class="row">
 		<div id="change" class="col-sm-6 well well-lg">
-			<h3>AJAX request structure</h3>
+			<h3>Palate Flavor</h3>
+				<h4>Fruit (White wine)</h4>
+					<div class="row">
+					<div class="inline">
+						<div class="check_box">
+							<%= check_box("citrus", "exist") %>		
+							<p>Citrus</p>			
+						</div>
+						<div class="check_box">
+							<%= check_box("apple_pear", "exist") %>
+							<p>Apple/Pear</p>						
+						</div>
+						<div class="check_box">
+							<%= check_box("stone_pit", "exist") %>
+							<p>Stone/Pit</p>						
+						</div>
+						<div class="check_box">
+							<%= check_box("tropical", "exist") %>
+							<p>Tropical</p>						
+						</div>
+						<div class="check_box">
+							<%= check_box("melon", "exist") %>
+							<p>Melon</p>						
+						</div>
+					</div>				
+					</div>			
+				<h4>Fruit (Red wine)</h4>
+					<div class="row">
+						<div class="inline">
+							<div class="check_box">
+								<%= check_box("red", "exist") %>		
+								<p>Red</p>			
+							</div>
+							<div class="check_box">
+								<%= check_box("black", "exist") %>
+								<p>Black</p>						
+							</div>
+							<div class="check_box">
+								<%= check_box("blue", "exist") %>
+								<p>Blue</p>						
+							</div>
+						</div>				
+					</div>	
+				<h4>Fruit Character</h4>		
+					<div class="row">
+						<div class="inline">
+							<div class="check_box">
+								<%= check_box("baked", "exist") %>		
+								<p>Baked</p>			
+							</div>
+							<div class="check_box">
+								<%= check_box("stewed", "exist") %>
+								<p>Stewed</p>						
+							</div>
+							<div class="check_box">
+								<%= check_box("dried", "exist") %>
+								<p>Dried</p>						
+							</div>
+							<div class="check_box">
+								<%= check_box("peels", "exist") %>
+								<p>Peels</p>						
+							</div>
+							<div class="check_box">
+								<%= check_box("desiccated", "exist") %>
+								<p>Desiccated</p>						
+							</div>
+						</div>				
+					</div>
+					<div class="row">
+						<div class="inline">
+							<div class="check_box">
+								<%= check_box("tart", "exist") %>
+								<p>Tart</p>						
+							</div>
+							<div class="check_box">
+								<%= check_box("jammy", "exist") %>
+								<p>Jammy</p>						
+							</div>
+						</div>
+					</div>
+				<h4>Non Fruit</h4>
+					<div class="row">
+						<div class="inline">
+							<div class="check_box">
+								<%= check_box("floral", "exist") %>		
+								<p>Floral</p>			
+							</div>
+							<div class="check_box">
+								<%= check_box("vegetal", "exist") %>
+								<p>Vegetal</p>						
+							</div>
+							<div class="check_box">
+								<%= check_box("herbal", "exist") %>
+								<p>Herbal</p>						
+							</div>
+							<div class="check_box">
+								<%= check_box("spice", "exist") %>
+								<p>Spice</p>						
+							</div>
+							<div class="check_box">
+								<%= check_box("petrol", "exist") %>
+								<p>Petrol</p>						
+							</div>
+						</div>				
+					</div>
+					<div class="row">
+						<div class="inline">
+							<div class="check_box">
+								<%= check_box("animal", "exist") %>		
+								<p>Animal</p>			
+							</div>
+							<div class="check_box">
+								<%= check_box("barn", "exist") %>
+								<p>Barn</p>						
+							</div>
+							<div class="check_box">
+								<%= check_box("fermentation", "exist") %>
+								<p>Fermentation</p>						
+							</div>							
+						</div>
+					</div>				
+    			<h4>Organic Earth</h4>
+					<div class="row">
+						<div class="inline">
+							<div class="check_box">
+								<%= check_box("forest_floor", "exist") %>		
+								<p>Forest Floor</p>			
+							</div>
+							<div class="check_box">
+								<%= check_box("compost", "exist") %>
+								<p>Compost</p>						
+							</div>
+							<div class="check_box">
+								<%= check_box("mushrooms", "exist") %>
+								<p>Mushrooms</p>						
+							</div>
+							<div class="check_box">
+								<%= check_box("potting_soil", "exist") %>
+								<p>Potting Soil</p>						
+							</div>
+						</div>				
+					</div>
+    			<h4>Inorganic Earth</h4>
+					<div class="row">
+						<div class="inline">
+							<div class="check_box">
+								<%= check_box("mineral", "exist") %>		
+								<p>Mineral</p>			
+							</div>
+							<div class="check_box">
+								<%= check_box("wet_rock", "exist") %>
+								<p>Wet Rock</p>						
+							</div>
+							<div class="check_box">
+								<%= check_box("limestone", "exist") %>
+								<p>Limestone</p>						
+							</div>
+							<div class="check_box">
+								<%= check_box("chalk", "exist") %>
+								<p>Chalk</p>						
+							</div>
+						</div>				
+					</div>
+					<div class="row">
+						<div class="inline">
+							<div class="check_box">
+								<%= check_box("slate", "exist") %>		
+								<p>Slate</p>			
+							</div>
+							<div class="check_box">
+								<%= check_box("flint", "exist") %>
+								<p>Flint</p>						
+							</div>
+						</div>				
+					</div>					    				
+    			<h4>Wood</h4>
+					<div class="row">
+						<div class="inline">
+							<div class="check_box">
+								<%= check_box("old", "exist") %>		
+								<p>Old</p>			
+							</div>
+							<div class="check_box">
+								<%= check_box("new", "exist") %>
+								<p>New</p>						
+							</div>
+							<div class="check_box">
+								<%= check_box("large", "exist") %>
+								<p>Large</p>						
+							</div>
+							<div class="check_box">
+								<%= check_box("small", "exist") %>
+								<p>Small</p>						
+							</div>
+						</div>				
+					</div>
+					<div class="row">
+						<div class="inline">
+							<div class="check_box">
+								<%= check_box("french", "exist") %>		
+								<p>French</p>			
+							</div>
+							<div class="check_box">
+								<%= check_box("american", "exist") %>
+								<p>American</p>						
+							</div>
+							<div class="check_box">
+								<%= check_box("no_wood", "exist") %>
+								<p>No wood</p>						
+							</div>
+						</div>				
+					</div>
+			<h3 id="middle">Palate Structure</h3>
 <!-- 			<p>Sweetness</p>
 			<p>Phenolic / Bitter (White)</p> -->
 			<p>Tannin (Red)</p>

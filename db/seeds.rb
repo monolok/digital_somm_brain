@@ -1,20 +1,20 @@
 
 #xxxxxx_structure.include?(5) or xxxxxx_structure.include?(4) both return true
-
+#PalateFlavor.first.grapes[0].testables
 
 #Cabernet Sauvignon and blends
 cab = Grape.create(name: "Cabernet Sauvignon and blends")
 	#Graves
 		Testable.create(name: "Graves", grape_id: cab.id)
 		graves_structure = PalateStructure.create(body: (4..5), alcohol: (4..5), acid: 4 , tannin: (4..5))
-		graves_flavor = PalateFlavor.create()
-		graves_nose = nil#Nose.create()
-		graves_sight = nil#Sight.create()
+		graves_flavor = PalateFlavor.create(fruit: ("TEST GRAVE"), fruit_character: (""), non_fruit: (""), organic_earth: (""), inorganic_earth: (""), wood: (""))
+		#graves_nose = Nose.create()
+		#graves_sight = Sight.create()
 
 		cab.palate_structures << graves_structure
 		cab.palate_flavors << graves_flavor
-		cab.noses << graves_nose
-		cab.sights << graves_sight
+		#cab.noses << graves_nose
+		#cab.sights << graves_sight
 
 	#Medoc
 	#Barossa Valley
@@ -28,14 +28,14 @@ cab = Grape.create(name: "Cabernet Sauvignon and blends")
 	#California (Napa, Sonoma, Central coast)
 		Testable.create(name: "California Cab", grape_id: cab.id)
 		cali_cab_structure = PalateStructure.create(body: (4..5), alcohol: (4..5), acid: (3..4) , tannin: (4..5))
-		cali_cab_flavor = nil
-		cali_cab_nose = nil
-		cali_cab_sight = nil
+		cali_cab_flavor = PalateFlavor.create(fruit: ("TEST CALI"), fruit_character: (""), non_fruit: (""), organic_earth: (""), inorganic_earth: (""), wood: (""))
+		#cali_cab_nose = nil
+		#cali_cab_sight = nil
 
 		cab.palate_structures << cali_cab_structure
 		cab.palate_flavors << cali_cab_flavor
-		cab.noses << cali_cab_nose
-		cab.sights << cali_cab_sight
+		#cab.noses << cali_cab_nose
+		#cab.sights << cali_cab_sight
 	#Washington (Columbia valley)
 
 #Cabernet Franc
@@ -44,14 +44,14 @@ cab_franc = Grape.create(name: "Cabernet Franc")
 	#Chinon
 		Testable.create(name: "Chinon", grape_id: cab_franc.id)
 		chinon_structure = PalateStructure.create(body: (3..4), alcohol: (3..4), acid: (4..5) , tannin: (3..4))
-		chinon_flavor = nil
-		chinon_nose = nil
-		chinon_sight = nil
+		#chinon_flavor = nil
+		#chinon_nose = nil
+		#chinon_sight = nil
 
 		cab_franc.palate_structures << chinon_structure
-		cab_franc.palate_flavors << chinon_flavor
-		cab_franc.noses << chinon_nose
-		cab_franc.sights << chinon_sight
+		#cab_franc.palate_flavors << chinon_flavor
+		#cab_franc.noses << chinon_nose
+		#cab_franc.sights << chinon_sight
 
 	#St. Nicolas de Bourgueil
 
@@ -69,14 +69,14 @@ cab_franc = Grape.create(name: "Cabernet Franc")
 gamay = Grape.create(name: "Gamay")
 Testable.create(name: "Beaujolais", grape_id: gamay.id)
 gamay_structure = PalateStructure.create(body: (2..4), alcohol: (3..4), acid: 4 , tannin: (2..3))
-gamay_flavor = nil
-gamay_nose = nil
-gamay_sight = nil
+#gamay_flavor = nil
+#gamay_nose = nil
+#gamay_sight = nil
 
 gamay.palate_structures << gamay_structure
-gamay.palate_flavors << gamay_flavor
-gamay.noses << gamay_nose
-gamay.sights << gamay_sight
+#gamay.palate_flavors << gamay_flavor
+#gamay.noses << gamay_nose
+#gamay.sights << gamay_sight
 	#Beaujolais (carbonic maceration)
 	#Beaujolais (no carbonic maceration)
 
@@ -85,14 +85,14 @@ gsm = Grape.create(name: "Grenache Blend")
 	#CDP
 	Testable.create(name: "CDP", grape_id: gsm.id)
 	cdp_structure = PalateStructure.create(body: (4..5), alcohol: (4..5), acid: (3..4) , tannin: (4..5))
-	cdp_flavor = nil
-	cdp_nose = nil
-	cdp_sight = nil
+	#cdp_flavor = nil
+	#cdp_nose = nil
+	#cdp_sight = nil
 
 	gsm.palate_structures << cdp_structure
-	gsm.palate_flavors << cdp_flavor
-	gsm.noses << cdp_nose
-	gsm.sights << cdp_sight
+	#gsm.palate_flavors << cdp_flavor
+	#gsm.noses << cdp_nose
+	#gsm.sights << cdp_sight
 
 	#Gigondas
 	#Vacqueyras
@@ -142,14 +142,14 @@ syrah = Grape.create(name: "Syrah")
 	#Norhtern Rhône
 	Testable.create(name: "Norhtern Rhône", grape_id: syrah.id)
 	nr_structure = PalateStructure.create(body: (4..5), alcohol: (3..4), acid: (3..4) , tannin: (4..5))
-	nr_flavor = nil
-	nr_nose = nil
-	nr_sight = nil
+	#nr_flavor = nil
+	#nr_nose = nil
+	#nr_sight = nil
 
 	syrah.palate_structures << nr_structure
-	syrah.palate_flavors << nr_flavor
-	syrah.noses << nr_nose
-	syrah.sights << nr_sight
+	#syrah.palate_flavors << nr_flavor
+	#syrah.noses << nr_nose
+	#syrah.sights << nr_sight
 
 	#South Australia
 	#Victoria
