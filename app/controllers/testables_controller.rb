@@ -1,7 +1,7 @@
 class TestablesController < ApplicationController
 
 def index
-	
+	@testables = Testable.all
 end
 
 def palate_structures
