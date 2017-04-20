@@ -79,7 +79,7 @@ $(document).ready(function(){
 //AJAX
 		$.ajax({
 		    type: "GET",
-		    url: "/palate_structures",
+		    url: "/test",
 		    data: { tannin: tannin, 
 		    		acid: acid, 
 		    		alcohol: alcohol, 
@@ -87,12 +87,9 @@ $(document).ready(function(){
 		    		palate_flavors: palate_flavors 
 		    		 },
 		    success: function (data) {
-		        $("#possible").empty();
-		        $("#possible").append("<li>tannin: " + data.tannin + "</li>");
-		       	$("#possible").append("<li>acid: " + data.acid + "</li>");
-		        $("#possible").append("<li>alcohol: " + data.alcohol + "</li>");
-		        $("#possible").append("<li>body: " + data.body + "</li>");
-		        $("#possible").append("<li>palate flavors: " + data.palate_flavors + "</li>");		       	
+		    	console.log(data);
+		        // $("#possible").empty();
+		        // $("#possible").append(data);		       	
 		    }
 		});
 	});
