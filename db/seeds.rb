@@ -5,7 +5,7 @@
 cab = Grape.create(name: "Cabernet Sauvignon and blends")
 	#Graves
 		Testable.create(name: "Graves", grape_id: cab.id)
-		graves_structure = PalateStructure.create(body: (4..5), alcohol: (4..5), acid: 4 , tannin: (4..5))
+		graves_structure = PalateStructure.create(body: (4..5), alcohol: (4..5), acid: (4..4), tannin: (4..5))
 		graves_flavor = PalateFlavor.create(fruit: ["black", "berry", "cherry", "cassis", "green olive"], fruit_character: ["tart", "stewed"], non_fruit: ["herbal", "animal", "cedar", "pencil lead", "violet"], organic_earth: ["forest floor", "mushrooms", "spice"], inorganic_earth: [""], wood: ["new", "old", "french"])
 		#graves_nose = Nose.create()
 		#graves_sight = Sight.create()
@@ -26,7 +26,7 @@ cab = Grape.create(name: "Cabernet Sauvignon and blends")
 	#Rapel
 	#California (Napa, Sonoma, Central coast)
 		Testable.create(name: "California Cab", grape_id: cab.id)
-		cali_cab_structure = PalateStructure.create(body: (4..5), alcohol: (4..5), acid: (3..4) , tannin: (4..5))
+		cali_cab_structure = PalateStructure.create(body: (4..5), alcohol: (4..5), acid: (3..4), tannin: (4..5))
 		cali_cab_flavor = PalateFlavor.create(fruit: ["black", "berry", "cherry", "cassis", "currant", "green olive"], fruit_character: ["jammy", "stewed"], non_fruit: ["herbal", "spice", "chocolate", "cedar"], organic_earth: [""], inorganic_earth: [""], wood: ["new", "old", "french", "american"])
 		#cali_cab_nose = nil
 		#cali_cab_sight = nil
@@ -42,7 +42,7 @@ cab_franc = Grape.create(name: "Cabernet Franc")
 	#Bourgueil
 	#Chinon
 		Testable.create(name: "Chinon", grape_id: cab_franc.id)
-		chinon_structure = PalateStructure.create(body: (3..4), alcohol: (3..4), acid: (4..5) , tannin: (3..4))
+		chinon_structure = PalateStructure.create(body: (3..4), alcohol: (3..4), acid: (4..5), tannin: (3..4))
 		chinon_flavor = PalateFlavor.create(fruit: ["red", "sour cherry", "plum", "raspberry", "cranberry"], fruit_character: ["tart"], non_fruit: ["vegetal", "herbal", "floral"], organic_earth: [""], inorganic_earth: ["mineral", "chalk", "wet rock", "limestone"], wood: ["no wood", "old", "new"])
 		#chinon_nose = nil
 		#chinon_sight = nil
@@ -67,7 +67,7 @@ cab_franc = Grape.create(name: "Cabernet Franc")
 #Gamay
 gamay = Grape.create(name: "Gamay")
 Testable.create(name: "Beaujolais", grape_id: gamay.id)
-gamay_structure = PalateStructure.create(body: (2..4), alcohol: (3..4), acid: 4 , tannin: (2..3))
+gamay_structure = PalateStructure.create(body: (2..4), alcohol: (3..4), acid: (4..4), tannin: (2..3))
 gamay_flavor = PalateFlavor.create(fruit: ["red", "artificial fruit", "tropical", "bubblegum"], fruit_character: ["tart", "baked", "candied"], non_fruit: ["herbal", "floral"], organic_earth: [""], inorganic_earth: ["mineral", "wet rock", "limestone", "slate"], wood: ["no wood"])
 #gamay_nose = nil
 #gamay_sight = nil
@@ -83,7 +83,7 @@ gamay.palate_flavors << gamay_flavor
 gsm = Grape.create(name: "Grenache Blend")
 	#CDP
 	Testable.create(name: "CDP", grape_id: gsm.id)
-	cdp_structure = PalateStructure.create(body: (4..5), alcohol: (4..5), acid: (3..4) , tannin: (4..5))
+	cdp_structure = PalateStructure.create(body: (4..5), alcohol: (4..5), acid: (3..4), tannin: (4..5))
 	cdp_flavor = PalateFlavor.create(fruit: ["black", "red"], fruit_character: ["baked", "ripe"], non_fruit: ["herbal", "garrigue", "spice", "pepper", "savory", "animal"], organic_earth: ["mushrooms", "forest floor", "potting soil"], inorganic_earth: ["limestone", "mineral", "wet rock", "slate", "flint"], wood: ["old", "french", "american", "large"])
 	#cdp_nose = nil
 	#cdp_sight = nil
@@ -144,7 +144,7 @@ pn = Grape.create(name: "Pinot Noir")
 syrah = Grape.create(name: "Syrah")
 	#Norhtern Rhône
 	Testable.create(name: "Norhtern Rhône", grape_id: syrah.id)
-	nr_structure = PalateStructure.create(body: (4..5), alcohol: (3..4), acid: (3..4) , tannin: (4..5))
+	nr_structure = PalateStructure.create(body: (4..5), alcohol: (3..4), acid: (3..4), tannin: (4..5))
 	nr_flavor = PalateFlavor.create(fruit: ["black", "red", "green", "plum"], fruit_character: ["tart"], non_fruit: ["herbal", "spice", "floral", "animal", "pepper", "provence herbs", "tobacco", "ash", "smoky-meat", "meat"], organic_earth: ["mushrooms", "forest floor"], inorganic_earth: ["mineral", "limestone", "wet rock"], wood: ["old", "french", "american", "large"])
 	#nr_nose = nil
 	#nr_sight = nil

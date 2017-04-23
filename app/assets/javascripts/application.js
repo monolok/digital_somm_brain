@@ -87,7 +87,7 @@ $(document).ready(function(){
 		    		palate_flavors: palate_flavors 
 		    		 },
 		    success: function (data) {
-		    	console.log(data);
+		    	//console.log(data);
 		        // $("#possible").empty();
 		        // $("#possible").append(data);		       	
 		    }
