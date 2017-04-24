@@ -87,9 +87,12 @@ $(document).ready(function(){
 		    		palate_flavors: palate_flavors 
 		    		 },
 		    success: function (data) {
-		    	//console.log(data);
-		        // $("#possible").empty();
-		        // $("#possible").append(data);		       	
+		    	console.log(data.length);
+		        $("#possible").empty();
+		        var dataLength = data.length
+		        for (var i = 0; i < data.length; i++) {
+		        	$("#possible").append("<li>" + data[i] + "</li>");
+		        };
 		    }
 		});
 	});

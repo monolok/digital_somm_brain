@@ -42,7 +42,7 @@ cab_franc = Grape.create(name: "Cabernet Franc")
 	#Bourgueil
 	#Chinon
 		Testable.create(name: "Chinon", grape_id: cab_franc.id)
-		chinon_structure = PalateStructure.create(body: (3..4), alcohol: (3..4), acid: (4..5), tannin: (3..4))
+		chinon_structure = PalateStructure.create(body: (3..3), alcohol: (3..4), acid: (4..5), tannin: (3..4))
 		chinon_flavor = PalateFlavor.create(fruit: ["red", "sour cherry", "plum", "raspberry", "cranberry"], fruit_character: ["tart"], non_fruit: ["vegetal", "herbal", "floral"], organic_earth: [""], inorganic_earth: ["mineral", "chalk", "wet rock", "limestone"], wood: ["no wood", "old", "new"])
 		#chinon_nose = nil
 		#chinon_sight = nil

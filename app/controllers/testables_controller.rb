@@ -5,13 +5,6 @@ class TestablesController < ApplicationController
 
 	def test
 		@grapes = Grape.all
-		
-		#@test = {}
-		#@test["tannin"] = params["tannin"]
-		#@test["acid"] = params["acid"]
-		#@test["alcohol"] = params["alcohol"]
-		#@test["body"] = params["body"]
-		#@test["palate_flavors"] = params["palate_flavors"]
 
 		@result = []
 		i = 0
@@ -23,14 +16,18 @@ class TestablesController < ApplicationController
 				if_alcohol_true = @grapes[i].palate_structures[z].alcohol.include?(params["alcohol"].to_i)
 				if_body_true = @grapes[i].palate_structures[z].body.include?(params["body"].to_i)
 				if if_tannin_true && if_acid_true && if_alcohol_true && if_body_true
-					@result << @grapes[i].testables
+					y = 0
+					while y < @grapes[i].testables.count
+						@result << @grapes[i].testables[y].name
+						y+=1
+					end
 				end
 				z+=1
 			end
 			i+=1
 		end
-		puts "here is the #{@result}"
-		#render json: @result 
+		#puts "here is the #{@result}"
+		render json: @result 
 	end
 
 end
