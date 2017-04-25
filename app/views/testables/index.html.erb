@@ -6,31 +6,39 @@
 	</div>
 	<div class="row">
 		<div id="change" class="col-sm-6 well well-lg">
-			<h3>Palate Flavor</h3>
+			<div>
+				<ul class="nav nav-pills">
+				  <li role="presentation" class="nav_li" id="show_flavor">Flavors</li>
+				  <li role="presentation" class="nav_li" id="show_structure">Structure</li>
+				  <li role="presentation" class="nav_li" id="show_comming">Comming...</li>
+				</ul>
+			</div>
+			<div id="show_flavor_div">
+				<h3>Palate Flavor</h3>
 				<h4>Fruit (White wine)</h4>
 					<div class="row">
-					<div class="inline">
-						<div class="check_box">
-							<%= check_box("citrus", "exist") %>		
-							<p>Citrus</p>			
-						</div>
-						<div class="check_box">
-							<%= check_box("apple_pear", "exist") %>
-							<p>Apple/Pear</p>						
-						</div>
-						<div class="check_box">
-							<%= check_box("stone_pit", "exist") %>
-							<p>Stone/Pit</p>						
-						</div>
-						<div class="check_box">
-							<%= check_box("tropical", "exist") %>
-							<p>Tropical</p>						
-						</div>
-						<div class="check_box">
-							<%= check_box("melon", "exist") %>
-							<p>Melon</p>						
-						</div>
-					</div>				
+						<div class="inline">
+							<div class="check_box">
+								<%= check_box("citrus", "exist") %>		
+								<p>Citrus</p>			
+							</div>
+							<div class="check_box">
+								<%= check_box("apple_pear", "exist") %>
+								<p>Apple/Pear</p>						
+							</div>
+							<div class="check_box">
+								<%= check_box("stone_pit", "exist") %>
+								<p>Stone/Pit</p>						
+							</div>
+							<div class="check_box">
+								<%= check_box("tropical", "exist") %>
+								<p>Tropical</p>						
+							</div>
+							<div class="check_box">
+								<%= check_box("melon", "exist") %>
+								<p>Melon</p>						
+							</div>
+						</div>				
 					</div>			
 				<h4>Fruit (Red wine)</h4>
 					<div class="row">
@@ -127,7 +135,7 @@
 							</div>							
 						</div>
 					</div>				
-    			<h4>Organic Earth</h4>
+				<h4>Organic Earth</h4>
 					<div class="row">
 						<div class="inline">
 							<div class="check_box">
@@ -148,7 +156,7 @@
 							</div>
 						</div>				
 					</div>
-    			<h4>Inorganic Earth</h4>
+				<h4>Inorganic Earth</h4>
 					<div class="row">
 						<div class="inline">
 							<div class="check_box">
@@ -181,7 +189,7 @@
 							</div>
 						</div>				
 					</div>					    				
-    			<h4>Wood</h4>
+				<h4>Wood</h4>
 					<div class="row">
 						<div class="inline">
 							<div class="check_box">
@@ -217,59 +225,60 @@
 								<p>No wood</p>						
 							</div>
 						</div>				
-					</div>
-			<h3 id="middle">Palate Structure</h3>
-<!-- 			<p>Sweetness</p>
-			<p>Phenolic / Bitter (White)</p> -->
-			<p>Tannin (Red)</p>
-			<input id="tannin" type="text"
-              	data-provide="slider"
-            	data-slider-ticks="[1, 2, 3, 4, 5]"
-              	data-slider-ticks-labels='["low", "med-", "med", "med+", "high"]'
-              	data-slider-min="1"
-              	data-slider-max="5"
-              	data-slider-step="1"
-              	data-slider-tooltip="hide" />
+					</div>				
+			</div>
+			<div id="show_structure_div">
+				<h3 id="middle">Palate Structure</h3>
+				<!-- <p>Sweetness</p>
+				<p>Phenolic / Bitter (White)</p> -->
+				<p>Tannin (Red)</p>
+				<input id="tannin" type="text"
+	              	data-provide="slider"
+	            	data-slider-ticks="[1, 2, 3, 4, 5]"
+	              	data-slider-ticks-labels='["low", "med-", "med", "med+", "high"]'
+	              	data-slider-min="1"
+	              	data-slider-max="5"
+	              	data-slider-step="1"
+	              	data-slider-tooltip="hide" />
 
-			<p>Acid</p>
-			<input id="acid" type="text"
-              	data-provide="slider"
-            	data-slider-ticks="[1, 2, 3, 4, 5]"
-              	data-slider-ticks-labels='["low", "med-", "med", "med+", "high"]'
-              	data-slider-min="1"
-              	data-slider-max="5"
-              	data-slider-step="1"
-              	data-slider-tooltip="hide" />
+				<p>Acid</p>
+				<input id="acid" type="text"
+	              	data-provide="slider"
+	            	data-slider-ticks="[1, 2, 3, 4, 5]"
+	              	data-slider-ticks-labels='["low", "med-", "med", "med+", "high"]'
+	              	data-slider-min="1"
+	              	data-slider-max="5"
+	              	data-slider-step="1"
+	              	data-slider-tooltip="hide" />
 
-			<p>Alcohol</p>
-			<input id="alcohol" type="text"
-              	data-provide="slider"
-            	data-slider-ticks="[1, 2, 3, 4, 5]"
-              	data-slider-ticks-labels='["low", "med-", "med", "med+", "high"]'
-              	data-slider-min="1"
-              	data-slider-max="5"
-              	data-slider-step="1"
-              	data-slider-tooltip="hide" />
+				<p>Alcohol</p>
+				<input id="alcohol" type="text"
+	              	data-provide="slider"
+	            	data-slider-ticks="[1, 2, 3, 4, 5]"
+	              	data-slider-ticks-labels='["low", "med-", "med", "med+", "high"]'
+	              	data-slider-min="1"
+	              	data-slider-max="5"
+	              	data-slider-step="1"
+	              	data-slider-tooltip="hide" />
 
-			<p>Body</p>
-			<input id="body" type="text"
-              	data-provide="slider"
-            	data-slider-ticks="[1, 2, 3, 4, 5]"
-              	data-slider-ticks-labels='["low", "med-", "med", "med+", "high"]'
-              	data-slider-min="1"
-              	data-slider-max="5"
-              	data-slider-step="1"
-              	data-slider-tooltip="hide" />
-<!-- 			<p>Texture</p>
-			<p>Balance</p>
-			<p>Length / Finish</p>
-			<p>Complexity</p> -->
+				<p>Body</p>
+				<input id="body" type="text"
+	              	data-provide="slider"
+	            	data-slider-ticks="[1, 2, 3, 4, 5]"
+	              	data-slider-ticks-labels='["low", "med-", "med", "med+", "high"]'
+	              	data-slider-min="1"
+	              	data-slider-max="5"
+	              	data-slider-step="1"
+	              	data-slider-tooltip="hide" />
+				<!-- <p>Texture</p>
+				<p>Balance</p>
+				<p>Length / Finish</p>
+				<p>Complexity</p> -->
+			</div>
 		</div>
 		<div class="col-sm-6 text-center">
 			<ul id="possible" class="list-unstyled">
-				<%# @testables.each do |t|%>
-					<%#= t.name%>
-				<%#end%>
+				<!-- AJAX -->
 			</ul>
 		</div>
 	</div>

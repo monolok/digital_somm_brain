@@ -1,6 +1,3 @@
-#xxxxxx_structure.include?(5) or xxxxxx_structure.include?(4) both return true
-#PalateFlavor.first.grapes[0].testables
-
 #Cabernet Sauvignon and blends
 cab = Grape.create(name: "Cabernet Sauvignon and blends")
 	#Graves

@@ -26,7 +26,7 @@ class TestablesController < ApplicationController
 			end
 			i+=1
 		end
-		#puts "here is the #{@result}"
+		puts "here is the #{params["palate_flavors"]}"
 		render json: @result 
 	end
 

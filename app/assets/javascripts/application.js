@@ -18,9 +18,26 @@
 //= require_tree .
 
 $(document).ready(function(){
+	
+$("#show_flavor_div").hide();
+$("#show_structure_div").hide();
+//ADD OTHER DIV TO HIDE
+	$(".nav_li").click(function(){
+		$(".nav_li").removeClass("active");
+		$(this).addClass("active");
+		var id = this.id+"_div";
+		$("#show_flavor_div").hide();
+		$("#show_structure_div").hide();
+		//ADD OTHER DIV TO HIDE
+		$("#"+id).show();
+	});
 
-//palate_structures data
+
+
+//START OF #CHANGE
 	$("#change").change(function() {
+
+//palate_structures data		
 		var tannin = document.getElementById("tannin").value;
 		var acid = document.getElementById("acid").value;
 		var alcohol = document.getElementById("alcohol").value;
@@ -97,5 +114,6 @@ $(document).ready(function(){
 		});
 	});
 
+//END OF #CHANGE
 
 })
