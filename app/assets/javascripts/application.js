@@ -19,16 +19,19 @@
 
 $(document).ready(function(){
 	
+$("#show_sight_div").hide();
+$("#show_nose_div").hide();
 $("#show_flavor_div").hide();
 $("#show_structure_div").hide();
-//ADD OTHER DIV TO HIDE
+
 	$(".nav_li").click(function(){
 		$(".nav_li").removeClass("active");
 		$(this).addClass("active");
 		var id = this.id+"_div";
+		$("#show_sight_div").hide();
+		$("#show_nose_div").hide();
 		$("#show_flavor_div").hide();
 		$("#show_structure_div").hide();
-		//ADD OTHER DIV TO HIDE
 		$("#"+id).show();
 	});
 
@@ -92,6 +95,9 @@ $("#show_structure_div").hide();
 		if (document.getElementById("french_exist").checked) { palate_flavors.push("french")};
 		if (document.getElementById("american_exist").checked) { palate_flavors.push("american")};
 		if (document.getElementById("no_wood_exist").checked) { palate_flavors.push("no wood")};
+		//Key element for testable flavor
+		var key_marker = document.getElementById("key_marker").value
+		if (!key_marker == false) { palate_flavors.push(key_marker)};
 
 //AJAX
 		$.ajax({
@@ -104,7 +110,6 @@ $("#show_structure_div").hide();
 		    		palate_flavors: palate_flavors 
 		    		 },
 		    success: function (data) {
-		    	console.log(data.length);
 		        $("#possible").empty();
 		        var dataLength = data.length
 		        for (var i = 0; i < data.length; i++) {
