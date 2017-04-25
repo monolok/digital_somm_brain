@@ -1,6 +1,7 @@
 class TestablesController < ApplicationController
 
-	def index	
+	def index
+		@testables = Testable.all
 	end
 
 	def test

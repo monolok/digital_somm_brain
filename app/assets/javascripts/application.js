@@ -23,6 +23,7 @@ $("#show_sight_div").hide();
 $("#show_nose_div").hide();
 $("#show_flavor_div").hide();
 $("#show_structure_div").hide();
+$("#show_wines_div").hide();
 
 	$(".nav_li").click(function(){
 		$(".nav_li").removeClass("active");
@@ -32,6 +33,7 @@ $("#show_structure_div").hide();
 		$("#show_nose_div").hide();
 		$("#show_flavor_div").hide();
 		$("#show_structure_div").hide();
+		$("#show_wines_div").hide();
 		$("#"+id).show();
 	});
 

@@ -12,6 +12,7 @@
 				  <li role="presentation" class="nav_li" id="show_nose">Nose</li>
 				  <li role="presentation" class="nav_li" id="show_flavor">Flavors</li>
 				  <li role="presentation" class="nav_li" id="show_structure">Structure</li>
+				  <li role="presentation" class="nav_li" id="show_wines">Database</li>
 				</ul>
 			</div>
 			<div id="show_sight_div">
@@ -233,7 +234,7 @@
 							</div>
 						</div>				
 					</div>
-				<h4>Key element</h4>
+				<h4>Key element?</h4>
 					<div class="row">
 						<div class="inline">
 							<input class="form-control" id="key_marker" placeholder="cedar, meat, olive ...">
@@ -288,8 +289,17 @@
 				<p>Length / Finish</p>
 				<p>Complexity</p> -->
 			</div>
+			<div id="show_wines_div">
+				<h3>Wines in database</h3>
+				<% @testables.each do |t| %>
+					<ul>
+						<%=t.name%>
+					</ul>
+				<%end%>
+			</div>
 		</div>
 		<div class="col-sm-6 text-center">
+			<h3>Results</h3>
 			<ul id="possible" class="list-unstyled">
 				<!-- AJAX -->
 			</ul>
