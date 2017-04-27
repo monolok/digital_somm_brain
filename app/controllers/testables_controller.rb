@@ -29,41 +29,51 @@ class TestablesController < ApplicationController
 						#FIGURE OUT what happen if 3 true and 2 false ?  
 						#for 1 true and any false @if_fruit_true will remain TRUE, it is a PB
 						# play with variable f which return array ONLY with checked box value that are coorect
+					end
 
-					elsif params["palate_flavors"]["fruit_character"].nil? == false
+					if params["palate_flavors"]["fruit_character"].nil? == false
 						fc = @grapes[i].palate_flavors[z].fruit_character & params["palate_flavors"]["fruit_character"]
 						if not fc.empty?
 							@if_fruit_character_true = true
 						end
+					end
 
-					elsif params["palate_flavors"]["non_fruit"].nil? == false
+					if params["palate_flavors"]["non_fruit"].nil? == false
 						nf = @grapes[i].palate_flavors[z].non_fruit & params["palate_flavors"]["non_fruit"]
 						if not nf.empty?
 							@if_non_fruit_true = true
-						end						
-					elsif params["palate_flavors"]["organic_earth"].nil? == false
+						end
+					end					
+					
+					if params["palate_flavors"]["organic_earth"].nil? == false
 						oe = @grapes[i].palate_flavors[z].organic_earth & params["palate_flavors"]["organic_earth"]
 						if not nf.empty?
 							@if_organic_earth_true = true
-						end						
-					elsif params["palate_flavors"]["inorganic_earth"].nil? == false
+						end	
+					end
+
+					if params["palate_flavors"]["inorganic_earth"].nil? == false
 						ie = @grapes[i].palate_flavors[z].inorganic_earth & params["palate_flavors"]["inorganic_earth"]
 						if not nf.empty?
 							@if_inorganic_earth_true = true			
 						end
-					elsif params["palate_flavors"]["wood"].nil? == false
+					end
+
+					if params["palate_flavors"]["wood"].nil? == false
 						w = @grapes[i].palate_flavors[z].wood & params["palate_flavors"]["wood"]
 						if not nf.empty?
 							@if_wood_true = true
 						end
-					#elsif params["palate_flavors"]["key"].nil? == false
-						#FIGURE OUT WHAT TO DO WITH KEY MARKER
-					else
 					end
+
+					#if params["palate_flavors"]["key"].nil? == false
+						#FIGURE OUT WHAT TO DO WITH KEY MARKER
+					#end
+					
 				end
 				
 				#RESULT: FIGURE OUT HOW TO RUN THIS, EVEN WHEN FRUIT, NON FRUIT... ARE NOT PRESENT
-				if @if_tannin_true && @if_acid_true && @if_alcohol_true && @if_body_true && @if_fruit_true #&& @if_fruit_character_true #&& @if_non_fruit_true && @if_organic_earth_true && @if_inorganic_earth_true && @if_wood_true
+				if @if_tannin_true && @if_acid_true && @if_alcohol_true && @if_body_true && @if_fruit_true && @if_fruit_character_true #&& @if_non_fruit_true && @if_organic_earth_true && @if_inorganic_earth_true && @if_wood_true
 					y = 0
 					while y < @grapes[i].testables.count
 						@result << @grapes[i].testables[y].name
