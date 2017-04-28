@@ -48,23 +48,27 @@ class TestablesController < ApplicationController
 					@if_wood_present = false
 					@if_key_present = false
 
-
 					if params["palate_flavors"]["fruit"].nil? == false
 						@if_fruit_present = true
 						f = @grapes[i].palate_flavors[zz].fruit & params["palate_flavors"]["fruit"]
-						if not f.empty?
-							@if_fruit_true = true
+						if not f.empty? 
+							if (params["palate_flavors"]["fruit"].count - 1) > f.count # -1 refer to 1 mistake tolerated
+								@if_fruit_true = false
+							else
+								@if_fruit_true = true
+							end
 						end
-						#FIGURE OUT what happen if 3 true and 2 false ?  
-						#for 1 true and any false @if_fruit_true will remain TRUE, it is a PB
-						# play with variable f which return array ONLY with checked box value that are coorect
 					end
 
 					if params["palate_flavors"]["fruit_character"].nil? == false
 						@if_fruit_character_present = true
 						fc = @grapes[i].palate_flavors[zz].fruit_character & params["palate_flavors"]["fruit_character"]
 						if not fc.empty?
-							@if_fruit_character_true = true
+							if (params["palate_flavors"]["fruit_character"].count - 1) > fc.count # -1 refer to 1 mistake tolerated
+								@if_fruit_character_true = false
+							else
+								@if_fruit_character_true = true
+							end							
 						end
 					end
 
@@ -80,7 +84,11 @@ class TestablesController < ApplicationController
 						@if_organic_earth_present = true
 						oe = @grapes[i].palate_flavors[zz].organic_earth & params["palate_flavors"]["organic_earth"]
 						if not oe.empty?
-							@if_organic_earth_true = true
+							if (params["palate_flavors"]["organic_earth"].count - 1) > oe.count # -1 refer to 1 mistake tolerated
+								@if_organic_earth_true = false
+							else
+								@if_organic_earth_true = true
+							end
 						end	
 					end
 
@@ -88,7 +96,11 @@ class TestablesController < ApplicationController
 						@if_inorganic_earth_present = true
 						ie = @grapes[i].palate_flavors[zz].inorganic_earth & params["palate_flavors"]["inorganic_earth"]
 						if not ie.empty?
-							@if_inorganic_earth_true = true			
+							if (params["palate_flavors"]["inorganic_earth"].count - 1) > ie.count # -1 refer to 1 mistake tolerated
+								@if_inorganic_earth_true = false
+							else
+								@if_inorganic_earth_true = true
+							end			
 						end
 					end
 
@@ -96,14 +108,15 @@ class TestablesController < ApplicationController
 						@if_wood_present = true
 						w = @grapes[i].palate_flavors[zz].wood & params["palate_flavors"]["wood"]
 						if not w.empty?
-							@if_wood_true = true
+							if (params["palate_flavors"]["wood"].count - 1) > w.count # -1 refer to 1 mistake tolerated
+								@if_wood_true = false
+							else
+								@if_wood_true = true
+							end
 						end
 					end
 
 					#if params["palate_flavors"]["key"].nil? == false
-						#@key_present = true
-						#FIGURE OUT WHAT TO DO WITH KEY MARKER
-						#@if_key_true = true
 					#end
 	
 					zz+=1
