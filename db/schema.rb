@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20170416171136) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "grapes", force: :cascade do |t|
     t.string   "name"
     t.string   "climate"
@@ -49,9 +52,17 @@ ActiveRecord::Schema.define(version: 20170416171136) do
   end
 
   create_table "noses", force: :cascade do |t|
+    t.text     "clean"
     t.text     "intensity"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.text     "age"
+    t.text     "fruit"
+    t.text     "fruit_character"
+    t.text     "non_fruit"
+    t.text     "organic_earth"
+    t.text     "inorganic_earth"
+    t.text     "wood"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "palate_flavors", force: :cascade do |t|
@@ -66,18 +77,33 @@ ActiveRecord::Schema.define(version: 20170416171136) do
   end
 
   create_table "palate_structures", force: :cascade do |t|
+    t.text     "sweetness"
+    t.text     "phenolic"
     t.text     "body"
     t.text     "alcohol"
     t.text     "acid"
     t.text     "tannin"
+    t.text     "texture"
+    t.text     "balance"
+    t.text     "length"
+    t.text     "complexity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "sights", force: :cascade do |t|
+    t.text     "clarity"
+    t.text     "brightness"
+    t.text     "concentration"
     t.text     "color"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.text     "secondary_colors"
+    t.text     "staining"
+    t.text     "tears"
+    t.text     "gas"
+    t.text     "sediment"
+    t.text     "rim"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
   create_table "testables", force: :cascade do |t|
