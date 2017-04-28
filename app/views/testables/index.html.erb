@@ -16,10 +16,332 @@
 				</ul>
 			</div>
 			<div id="show_sight_div">
-				SIGHT
+				<h3>Sight</h3>
+				<p>Clarity</p>
+					<input id="clarity" type="text"
+		              	data-provide="slider"
+		            	data-slider-ticks="[1, 2, 3]"
+		              	data-slider-ticks-labels='["clear", "hazy/cloudy", "opaque"]'
+		              	data-slider-min="1"
+		              	data-slider-max="3"
+		              	data-slider-step="1"
+		              	data-slider-tooltip="hide" />
+		        <p>Brightness</p>
+					<input id="brightness" type="text"
+		              	data-provide="slider"
+		            	data-slider-ticks="[1, 2, 3, 4]"
+		              	data-slider-ticks-labels='["dull", "bright", "day bright", "star bright"]'
+		              	data-slider-min="1"
+		              	data-slider-max="4"
+		              	data-slider-step="1"
+		              	data-slider-tooltip="hide" />
+				<p>Concentration</p>
+					<input id="concentration" type="text"
+		              	data-provide="slider"
+		            	data-slider-ticks="[1, 2, 3]"
+		              	data-slider-ticks-labels='["pale", "medium", "deep"]'
+		              	data-slider-min="1"
+		              	data-slider-max="3"
+		              	data-slider-step="1"
+		              	data-slider-tooltip="hide" />				
+		        <p>Color (White)</p>
+					<input id="color_white" type="text"
+		              	data-provide="slider"
+		            	data-slider-ticks="[1, 2, 3, 4]"
+		              	data-slider-ticks-labels='["water", "straw", "yellow", "gold"]'
+		              	data-slider-min="1"
+		              	data-slider-max="4"
+		              	data-slider-step="1"
+		              	data-slider-tooltip="hide" />
+		        <p>Color (Red)</p>
+					<input id="color_red" type="text"
+		              	data-provide="slider"
+		            	data-slider-ticks="[1, 2, 3, 4]"
+		              	data-slider-ticks-labels='["purple", "ruby", "red", "garnet"]'
+		              	data-slider-min="1"
+		              	data-slider-max="4"
+		              	data-slider-step="1"
+		              	data-slider-tooltip="hide" />
+		        <p>Secondary Colors</p>
+		        ...
+					<!-- <input id="secondary_colors" type="text"
+		              	data-provide="slider"
+		            	data-slider-ticks="[1, 2, 3, 4, 5, 6, 7]"
+		              	data-slider-ticks-labels='["silver", "green", "copper", "blue", "ruby", "garnet", "brown"]'
+		              	data-slider-min="1"
+		              	data-slider-max="7"
+		              	data-slider-step="1"
+		              	data-slider-tooltip="hide" /> -->
+				<p>Staining</p>
+					<input id="staining" type="text"
+		              	data-provide="slider"
+		            	data-slider-ticks="[1, 2, 3, 4]"
+		              	data-slider-ticks-labels='["none", "light", "medium", "heavy"]'
+		              	data-slider-min="1"
+		              	data-slider-max="4"
+		              	data-slider-step="1"
+		              	data-slider-tooltip="hide" />
+		        <p>Tears</p>
+					<input id="tears" type="text"
+		              	data-provide="slider"
+		            	data-slider-ticks="[1, 2, 3]"
+		              	data-slider-ticks-labels='["light", "medium", "heavy"]'
+		              	data-slider-min="1"
+		              	data-slider-max="4"
+		              	data-slider-step="1"
+		              	data-slider-tooltip="hide" />
+		        <p><u>Tick boxes if yes:</u></p>
+				<div class="row">
+					<div class="inline">
+						<div class="check_box">
+							<%= check_box("gas", "exist") %>		
+							<p>Gas Evidence?</p>			
+						</div>
+						<div class="check_box">
+							<%= check_box("apple_pear", "exist") %>
+							<p>Sediment / Particles?</p>	
+						</div>
+						<div class="check_box">
+							<%= check_box("apple_pear", "exist") %>
+							<p>Rim Variation?</p>	
+						</div>
+					</div>				
+				</div>	
 			</div>
 			<div id="show_nose_div">
-				NOSE
+				<h3>Nose</h3>
+				<h4>Clean / Faulty</h4>
+				...
+				<h4>Intensity</h4>
+					<div class="row">
+						<div class="inline">
+							<div class="check_box">
+								<%= check_box("delicate_nose", "exist") %>
+								<p>Delicate</p>			
+							</div>
+							<div class="check_box">
+								<%= check_box("moderate_nose", "exist") %>
+								<p>Moderate</p>						
+							</div>
+							<div class="check_box">
+								<%= check_box("powerful_nose", "exist") %>
+								<p>Powerful</p>						
+							</div>
+						</div>				
+					</div>
+				<h4>Age Assessment</h4>
+				...
+				<h4>Fruit (White wine)</h4>
+					<div class="row">
+						<div class="inline">
+							<div class="check_box">
+								<%= check_box("citrus_nose", "exist") %>		
+								<p>Citrus</p>			
+							</div>
+							<div class="check_box">
+								<%= check_box("apple_pear_nose", "exist") %>
+								<p>Apple/Pear</p>						
+							</div>
+							<div class="check_box">
+								<%= check_box("stone_pit_nose", "exist") %>
+								<p>Stone/Pit</p>						
+							</div>
+							<div class="check_box">
+								<%= check_box("tropical_nose", "exist") %>
+								<p>Tropical</p>						
+							</div>
+							<div class="check_box">
+								<%= check_box("melon_nose", "exist") %>
+								<p>Melon</p>						
+							</div>
+						</div>				
+					</div>			
+				<h4>Fruit (Red wine)</h4>
+					<div class="row">
+						<div class="inline">
+							<div class="check_box">
+								<%= check_box("red_nose", "exist") %>	
+								<p>Red</p>			
+							</div>
+							<div class="check_box">
+								<%= check_box("black_nose", "exist") %>
+								<p>Black</p>						
+							</div>
+							<div class="check_box">
+								<%= check_box("blue_nose", "exist") %>
+								<p>Blue</p>						
+							</div>
+						</div>				
+					</div>	
+				<h4>Fruit Character</h4>		
+					<div class="row">
+						<div class="inline">
+							<div class="check_box">
+								<%= check_box("baked_nose", "exist") %>	
+								<p>Baked</p>			
+							</div>
+							<div class="check_box">
+								<%= check_box("stewed_nose", "exist") %>
+								<p>Stewed</p>						
+							</div>
+							<div class="check_box">
+								<%= check_box("dried_nose", "exist") %>
+								<p>Dried</p>						
+							</div>
+							<div class="check_box">
+								<%= check_box("peels_nose", "exist") %>
+								<p>Peels</p>						
+							</div>
+							<div class="check_box">
+								<%= check_box("desiccated_nose", "exist") %>
+								<p>Desiccated</p>						
+							</div>
+						</div>				
+					</div>
+					<div class="row">
+						<div class="inline">
+							<div class="check_box">
+								<%= check_box("tart_nose", "exist") %>
+								<p>Tart</p>						
+							</div>
+							<div class="check_box">
+								<%= check_box("jammy_nose", "exist") %>
+								<p>Jammy</p>						
+							</div>
+						</div>
+					</div>
+				<h4>Non Fruit</h4>
+					<div class="row">
+						<div class="inline">
+							<div class="check_box">
+								<%= check_box("floral_nose", "exist") %>
+								<p>Floral</p>			
+							</div>
+							<div class="check_box">
+								<%= check_box("vegetal_nose", "exist") %>
+								<p>Vegetal</p>						
+							</div>
+							<div class="check_box">
+								<%= check_box("herbal_nose", "exist") %>
+								<p>Herbal</p>						
+							</div>
+							<div class="check_box">
+								<%= check_box("spice_nose", "exist") %>
+								<p>Spice</p>						
+							</div>
+							<div class="check_box">
+								<%= check_box("petrol_nose", "exist") %>
+								<p>Petrol</p>						
+							</div>
+						</div>				
+					</div>
+					<div class="row">
+						<div class="inline">
+							<div class="check_box">
+								<%= check_box("animal_nose", "exist") %>
+								<p>Animal</p>			
+							</div>
+							<div class="check_box">
+								<%= check_box("barn_nose", "exist") %>
+								<p>Barn</p>						
+							</div>
+							<div class="check_box">
+								<%= check_box("fermentation_nose", "exist") %>
+								<p>Fermentation</p>						
+							</div>							
+						</div>
+					</div>				
+				<h4>Organic Earth</h4>
+					<div class="row">
+						<div class="inline">
+							<div class="check_box">
+								<%= check_box("forest_floor_nose", "exist") %>		
+								<p>Forest Floor</p>			
+							</div>
+							<div class="check_box">
+								<%= check_box("compost_nose", "exist") %>
+								<p>Compost</p>						
+							</div>
+							<div class="check_box">
+								<%= check_box("mushrooms_nose", "exist") %>
+								<p>Mushrooms</p>						
+							</div>
+							<div class="check_box">
+								<%= check_box("potting_soil_nose", "exist") %>
+								<p>Potting Soil</p>						
+							</div>
+						</div>				
+					</div>
+				<h4>Inorganic Earth</h4>
+					<div class="row">
+						<div class="inline">
+							<div class="check_box">
+								<%= check_box("mineral_nose", "exist") %>		
+								<p>Mineral</p>			
+							</div>
+							<div class="check_box">
+								<%= check_box("wet_rock_nose", "exist") %>
+								<p>Wet Rock</p>						
+							</div>
+							<div class="check_box">
+								<%= check_box("limestone_nose", "exist") %>
+								<p>Limestone</p>						
+							</div>
+							<div class="check_box">
+								<%= check_box("chalk_nose", "exist") %>
+								<p>Chalk</p>						
+							</div>
+						</div>				
+					</div>
+					<div class="row">
+						<div class="inline">
+							<div class="check_box">
+								<%= check_box("slate_nose", "exist") %>		
+								<p>Slate</p>			
+							</div>
+							<div class="check_box">
+								<%= check_box("flint_nose", "exist") %>
+								<p>Flint</p>						
+							</div>
+						</div>				
+					</div>					    				
+				<h4>Wood</h4>
+					<div class="row">
+						<div class="inline">
+							<div class="check_box">
+								<%= check_box("old_nose", "exist") %>		
+								<p>Old</p>			
+							</div>
+							<div class="check_box">
+								<%= check_box("new_nose", "exist") %>
+								<p>New</p>						
+							</div>
+							<div class="check_box">
+								<%= check_box("large_nose", "exist") %>
+								<p>Large</p>						
+							</div>
+							<div class="check_box">
+								<%= check_box("small_nose", "exist") %>
+								<p>Small</p>						
+							</div>
+						</div>				
+					</div>
+					<div class="row">
+						<div class="inline">
+							<div class="check_box">
+								<%= check_box("french_nose", "exist") %>		
+								<p>French</p>			
+							</div>
+							<div class="check_box">
+								<%= check_box("american_nose", "exist") %>
+								<p>American</p>						
+							</div>
+							<div class="check_box">
+								<%= check_box("no_wood_nose", "exist") %>
+								<p>No wood</p>						
+							</div>
+						</div>				
+					</div>
 			</div>
 			<div id="show_flavor_div">
 				<h3>Palate Flavor</h3>
@@ -243,8 +565,10 @@
 			</div>
 			<div id="show_structure_div">
 				<h3 id="middle">Palate Structure</h3>
-				<!-- <p>Sweetness</p>
-				<p>Phenolic / Bitter (White)</p> -->
+				<p>Sweetness</p>
+				...
+				<p>Phenolic / Bitter (White)</p>
+				...
 				<p>Tannin (Red)</p>
 				<input id="tannin" type="text"
 	              	data-provide="slider"
@@ -284,10 +608,14 @@
 	              	data-slider-max="5"
 	              	data-slider-step="1"
 	              	data-slider-tooltip="hide" />
-				<!-- <p>Texture</p>
+				<p>Texture</p>
+				...
 				<p>Balance</p>
+				...
 				<p>Length / Finish</p>
-				<p>Complexity</p> -->
+				...
+				<p>Complexity</p>
+				...
 			</div>
 			<div id="show_wines_div">
 				<h3>Wines in database</h3>

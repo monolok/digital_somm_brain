@@ -42,6 +42,10 @@ $("#show_wines_div").hide();
 //START OF #CHANGE
 	$("#change").change(function() {
 
+//sight
+
+//nose
+
 //palate_structures data		
 		var tannin = document.getElementById("tannin").value;
 		var acid = document.getElementById("acid").value;
