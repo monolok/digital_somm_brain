@@ -12,8 +12,31 @@ class TestablesController < ApplicationController
 		while i < @grapes.count
 
 			#SIGHT
-			
+			s = 0
+			while s < @grapes[i].sight.count
+				@if_clarity_true = @grapes[i].sight[s].clarity.include?(params["sight"]["clarity"].to_i)
+				@if_brightness_true = @grapes[i].sight[s].brightness.include?(params["sight"]["brightness"].to_i)
+				@if_concentration_true = @grapes[i].sight[s].concentration.include?(params["sight"]["concentration"].to_i)
+				@if_color_white_true = @grapes[i].sight[s].color_white.include?(params["sight"]["color_white"].to_i)
+				#params["sight"]["color_red"]
+				#params["sight"]["staining"] 
+				#params["sight"]["tears"]
+
+				#CHECK BOX
+				#params["sight"]["gas"]
+				#params["sight"]["sediment"]
+				#params["sight"]["rim"]
+				s+=1
+			end
+
 			#NOSE
+			#params["nose"]["intensity"]
+			#params["nose"]["fruit"]
+			#params["nose"]["fruit_character"]
+			#params["nose"]["non_fruit"]
+			#params["nose"]["organic_earth"]
+			#params["nose"]["inorganic_earth"]
+			#params["nose"]["wood"]
 
 			#STRUCTURE
 			z = 0
