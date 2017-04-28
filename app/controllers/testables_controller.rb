@@ -12,7 +12,7 @@ class TestablesController < ApplicationController
 		while i < @grapes.count
 
 			#SIGHT
-
+			
 			#NOSE
 
 			#STRUCTURE
@@ -20,10 +20,10 @@ class TestablesController < ApplicationController
 			while z < @grapes[i].palate_structures.count
 
 				#STRUCURE (structure is recorded in ranges so no need to test different options)
-				@if_tannin_true = @grapes[i].palate_structures[z].tannin.include?(params["tannin"].to_i)
-				@if_acid_true = @grapes[i].palate_structures[z].acid.include?(params["acid"].to_i)
-				@if_alcohol_true = @grapes[i].palate_structures[z].alcohol.include?(params["alcohol"].to_i)
-				@if_body_true = @grapes[i].palate_structures[z].body.include?(params["body"].to_i)
+				@if_tannin_true = @grapes[i].palate_structures[z].tannin.include?(params["palate_structures"]["tannin"].to_i)
+				@if_acid_true = @grapes[i].palate_structures[z].acid.include?(params["palate_structures"]["acid"].to_i)
+				@if_alcohol_true = @grapes[i].palate_structures[z].alcohol.include?(params["palate_structures"]["alcohol"].to_i)
+				@if_body_true = @grapes[i].palate_structures[z].body.include?(params["palate_structures"]["body"].to_i)
 				z+=1
 			end
 
