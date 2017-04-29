@@ -209,6 +209,7 @@ $("#show_wines_div").hide();
 		    		palate_flavors: palate_flavors 
 		    		 },
 		    success: function (data) {
+		    	//console.log(data);
 		        $("#possible").empty();
 		        var dataLength = data.length
 		        for (var i = 0; i < data.length; i++) {

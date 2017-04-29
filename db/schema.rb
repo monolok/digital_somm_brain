@@ -99,9 +99,9 @@ ActiveRecord::Schema.define(version: 20170416171136) do
     t.text     "secondary_colors"
     t.text     "staining"
     t.text     "tears"
-    t.text     "gas"
-    t.text     "sediment"
-    t.text     "rim"
+    t.boolean  "gas"
+    t.boolean  "sediment"
+    t.boolean  "rim"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
   end

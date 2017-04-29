@@ -7,7 +7,7 @@ class Sight < ApplicationRecord
 	serialize :secondary_colors
 	serialize :staining
 	serialize :tears
-	serialize :gas
-	serialize :sediment
-	serialize :rim
+	# serialize :gas
+	# serialize :sediment
+	# serialize :rim
 end

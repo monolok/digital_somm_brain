@@ -8,9 +8,9 @@ class CreateSights < ActiveRecord::Migration[5.0]
       t.text :secondary_colors
       t.text :staining
       t.text :tears
-      t.text :gas
-      t.text :sediment
-      t.text :rim
+      t.boolean :gas
+      t.boolean :sediment
+      t.boolean :rim
       
       t.timestamps
     end

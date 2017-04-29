@@ -13,30 +13,134 @@ class TestablesController < ApplicationController
 
 			#SIGHT
 			s = 0
-			while s < @grapes[i].sight.count
-				@if_clarity_true = @grapes[i].sight[s].clarity.include?(params["sight"]["clarity"].to_i)
-				@if_brightness_true = @grapes[i].sight[s].brightness.include?(params["sight"]["brightness"].to_i)
-				@if_concentration_true = @grapes[i].sight[s].concentration.include?(params["sight"]["concentration"].to_i)
-				@if_color_white_true = @grapes[i].sight[s].color_white.include?(params["sight"]["color_white"].to_i)
-				#params["sight"]["color_red"]
-				#params["sight"]["staining"] 
-				#params["sight"]["tears"]
-
-				#CHECK BOX
-				#params["sight"]["gas"]
-				#params["sight"]["sediment"]
-				#params["sight"]["rim"]
+			while s < @grapes[i].sights.count
+				@if_clarity_true = @grapes[i].sights[s].clarity.include?(params["sight"]["clarity"].to_i)
+				@if_brightness_true = @grapes[i].sights[s].brightness.include?(params["sight"]["brightness"].to_i)
+				@if_concentration_true = @grapes[i].sights[s].concentration.include?(params["sight"]["concentration"].to_i)
+				@if_color_white_true = @grapes[i].sights[s].color.include?(params["sight"]["color_white"].to_i)
+				@if_color_red_true = @grapes[i].sights[s].color.include?(params["sight"]["color_red"].to_i)
+				@if_staining_true = @grapes[i].sights[s].staining.include?(params["sight"]["staining"].to_i)
+				@if_tears_true = @grapes[i].sights[s].tears.include?(params["sight"]["tears"].to_i)
+				if params["sight"]["gas"] && @grapes[i].sights[s].gas
+					@if_gas_true = true
+				end
+				if params["sight"]["sediment"] && @grapes[i].sights[s].sediment
+					@if_sediment_true = true
+				end
+				if params["sight"]["rim"] && @grapes[i].sights[s].rim
+					@if_rim_true = true
+				end
 				s+=1
 			end
 
 			#NOSE
-			#params["nose"]["intensity"]
-			#params["nose"]["fruit"]
-			#params["nose"]["fruit_character"]
-			#params["nose"]["non_fruit"]
-			#params["nose"]["organic_earth"]
-			#params["nose"]["inorganic_earth"]
-			#params["nose"]["wood"]
+			if not params["nose"].nil?
+				n = 0
+				while n < @grapes[i].noses.count
+					
+					@if_intensity_nose_true = false
+					@if_fruit_nose_true = false
+					@if_fruit_character_nose_true = false
+					@if_non_fruit_nose_true = false
+					@if_organic_earth_nose_true = false
+					@if_inorganic_earth_nose_true = false
+					@if_wood_nose_true = false
+
+					@if_intensity_nose_present = false
+					@if_fruit_nose_present = false
+					@if_fruit_character_nose_present = false
+					@if_non_fruit_nose_present = false
+					@if_organic_earth_nose_present = false
+					@if_inorganic_earth_nose_present = false
+					@if_wood_nose_present = false
+
+					if params["nose"]["intensity"].nil? == false
+						@if_intensity_nose_present = true
+						ni = @grapes[i].noses[n].intensity & params["nose"]["intensity"]
+						if not ni.empty? 
+							if params["nose"]["intensity"].count > ni.count #no mistakes tolerated
+								@if_intensity_nose_true = false
+							else
+								@if_intensity_nose_true = true
+							end
+						end
+					end
+
+					if params["nose"]["fruit"].nil? == false
+						@if_fruit_nose_present = true
+						fn = @grapes[i].noses[n].fruit & params["nose"]["fruit"]
+						if not fn.empty? 
+							if (params["nose"]["fruit"].count - 1) > fn.count # -1 refer to 1 mistake tolerated
+								@if_fruit_nose_true = false
+							else
+								@if_fruit_nose_true = true
+							end
+						end
+					end
+
+					if params["nose"]["fruit_character"].nil? == false
+						@if_fruit_character_nose_present = true
+						fcn = @grapes[i].noses[n].fruit_character & params["nose"]["fruit_character"]
+						if not fcn.empty? 
+							if (params["nose"]["fruit_character"].count - 1) > fcn.count # -1 refer to 1 mistake tolerated
+								@if_fruit_character_nose_true = false
+							else
+								@if_fruit_character_nose_true = true
+							end
+						end
+					end
+
+					if params["nose"]["non_fruit"].nil? == false
+						@if_non_fruit_nose_present = true
+						nfn = @grapes[i].noses[n].non_fruit & params["nose"]["non_fruit"]
+						if not nfn.empty? 
+							if (params["nose"]["non_fruit"].count - 1) > nfn.count # -1 refer to 1 mistake tolerated
+								@if_non_fruit_nose_true= false
+							else
+								@if_non_fruit_nose_true = true
+							end
+						end
+					end
+
+					if params["nose"]["organic_earth"].nil? == false
+						@if_organic_earth_nose_present = true
+						oen = @grapes[i].noses[n].organic_earth & params["nose"]["organic_earth"]
+						if not oen.empty? 
+							if (params["nose"]["organic_earth"].count - 1) > oen.count # -1 refer to 1 mistake tolerated
+								@if_organic_earth_nose_true = false
+							else
+								@if_organic_earth_nose_true = true
+							end
+						end
+					end
+
+					if params["nose"]["inorganic_earth"].nil? == false
+						@if_inorganic_earth_nose_present = true
+						ien = @grapes[i].noses[n].inorganic_earth & params["nose"]["inorganic_earth"]
+						if not ien.empty? 
+							if (params["nose"]["inorganic_earth"].count - 1) > ien.count # -1 refer to 1 mistake tolerated
+								@if_inorganic_earth_nose_true = false
+							else
+								@if_inorganic_earth_nose_true = true
+							end
+						end
+					end
+
+					if params["nose"]["wood"].nil? == false
+						@if_wood_nose_present = true
+						wn = @grapes[i].noses[n].wood & params["nose"]["wood"]
+						if not wn.empty? 
+							if (params["nose"]["wood"].count - 1) > wn.count # -1 refer to 1 mistake tolerated
+								@if_wood_nose_true = false
+							else
+								@if_wood_nose_true = true
+							end
+						end
+					end
+
+					n+=1
+				end
+			end
 
 			#STRUCTURE
 			z = 0
@@ -199,7 +303,10 @@ class TestablesController < ApplicationController
 			end
 			i+=1
 		end
-		render json: @result 
+		render json: @result
+
+		#FOR TESTING PURPOSES
+		#render json: @if_sediment_true 
 	end
 
 end
