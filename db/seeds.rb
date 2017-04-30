@@ -5,7 +5,7 @@ cab = Grape.create(name: "Cabernet Sauvignon and blends")
 		graves_structure = PalateStructure.create(body: (4..5), alcohol: (4..5), acid: (4..4), tannin: (4..5))
 		graves_flavor = PalateFlavor.create(fruit: ["black", "berry", "cherry", "cassis", "green olive"], fruit_character: ["tart", "stewed"], non_fruit: ["herbal", "animal", "cedar", "pencil lead", "violet"], organic_earth: ["forest floor", "mushrooms", "spice"], inorganic_earth: [""], wood: ["new", "old", "french"])
 		graves_nose = Nose.create(intensity: [""], fruit: ["black", "berry", "cherry", "cassis", "green olive"], fruit_character: ["tart", "stewed"], non_fruit: ["herbal", "animal", "cedar", "pencil lead", "violet"], organic_earth: ["forest floor", "mushrooms", "spice"], inorganic_earth: [""], wood: ["new", "old", "french"])
-		graves_sight = Sight.create(color: ["ruby"], concentration: ["deep"])
+		graves_sight = Sight.create(color: (2..2), concentration: (3..3))
 
 		cab.palate_structures << graves_structure
 		cab.palate_flavors << graves_flavor

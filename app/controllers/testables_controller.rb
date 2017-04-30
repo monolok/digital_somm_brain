@@ -250,15 +250,27 @@ class TestablesController < ApplicationController
 				end
 			end
 
-			#RESULTS
-			if @if_tannin_true && @if_acid_true && @if_alcohol_true && @if_body_true
+			#RESULTS WHEN STRUCURE IS TRUE
+			if @if_tannin_true && @if_acid_true && @if_alcohol_true && @if_body_true				
 
+				#RESULT FOR STRUCTURE - PRIORITY
 				y = 0
 				while y < @grapes[i].testables.count
 					@result << @grapes[i].testables[y].name
 					y+=1
 				end	
 
+				#RESULT FOR SIGHT
+
+				# if not @if_concentration_true
+				# 		@if_color_white_true
+				# 		@if_color_red_true
+
+				#RESULT FOR NOSE
+				
+				#COPY PAST PALATE FLAVORS WITH ADJUSTMENT + INTENSITY - KEY
+
+				# RESULT FOR PALATE FLAVORS
 				if @if_fruit_present
 					if not @if_fruit_true
 						@result.pop
