@@ -4,13 +4,13 @@ cab = Grape.create(name: "Cabernet Sauvignon and blends")
 		Testable.create(name: "Graves", grape_id: cab.id)
 		graves_structure = PalateStructure.create(body: (4..5), alcohol: (4..5), acid: (4..4), tannin: (4..5))
 		graves_flavor = PalateFlavor.create(fruit: ["black", "berry", "cherry", "cassis", "green olive"], fruit_character: ["tart", "stewed"], non_fruit: ["herbal", "animal", "cedar", "pencil lead", "violet"], organic_earth: ["forest floor", "mushrooms", "spice"], inorganic_earth: [""], wood: ["new", "old", "french"])
-		#graves_nose = Nose.create()
-		#graves_sight = Sight.create()
+		graves_nose = Nose.create(intensity: [""], fruit: ["black", "berry", "cherry", "cassis", "green olive"], fruit_character: ["tart", "stewed"], non_fruit: ["herbal", "animal", "cedar", "pencil lead", "violet"], organic_earth: ["forest floor", "mushrooms", "spice"], inorganic_earth: [""], wood: ["new", "old", "french"])
+		graves_sight = Sight.create(color: ["ruby"], concentration: ["deep"])
 
 		cab.palate_structures << graves_structure
 		cab.palate_flavors << graves_flavor
-		#cab.noses << graves_nose
-		#cab.sights << graves_sight
+		cab.noses << graves_nose
+		cab.sights << graves_sight
 
 	#Medoc
 	#Barossa Valley
