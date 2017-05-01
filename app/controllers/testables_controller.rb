@@ -14,11 +14,27 @@ class TestablesController < ApplicationController
 			#SIGHT
 			s = 0
 			while s < @grapes[i].sights.count
+
+				@if_concentration_present = false
+				@if_color_white_present = false
+				@if_color_red_present = false
+
 				#@if_clarity_true = @grapes[i].sights[s].clarity.include?(params["sight"]["clarity"].to_i)
 				#@if_brightness_true = @grapes[i].sights[s].brightness.include?(params["sight"]["brightness"].to_i)
-				@if_concentration_true = @grapes[i].sights[s].concentration.include?(params["sight"]["concentration"].to_i)
-				@if_color_white_true = @grapes[i].sights[s].color.include?(params["sight"]["color_white"].to_i)
-				@if_color_red_true = @grapes[i].sights[s].color.include?(params["sight"]["color_red"].to_i)
+				if params["sight"]["concentration"].to_i != 0
+					@if_concentration_present = true
+					@if_concentration_true = @grapes[i].sights[s].concentration.include?(params["sight"]["concentration"].to_i)
+				end
+				
+				if params["sight"]["color_white"].to_i != 0
+					@if_color_white_present = true
+					@if_color_white_true = @grapes[i].sights[s].color.include?(params["sight"]["color_white"].to_i)
+				end
+				
+				if params["sight"]["color_red"].to_i != 0
+					@if_color_red_present = true
+					@if_color_red_true = @grapes[i].sights[s].color.include?(params["sight"]["color_red"].to_i)
+				end
 				#@if_staining_true = @grapes[i].sights[s].staining.include?(params["sight"]["staining"].to_i)
 				#@if_tears_true = @grapes[i].sights[s].tears.include?(params["sight"]["tears"].to_i)
 				# if params["sight"]["gas"] && @grapes[i].sights[s].gas
@@ -253,24 +269,72 @@ class TestablesController < ApplicationController
 			#RESULTS WHEN STRUCURE IS TRUE
 			if @if_tannin_true && @if_acid_true && @if_alcohol_true && @if_body_true				
 
-				#RESULT FOR STRUCTURE - PRIORITY
+			#RESULT FOR STRUCTURE - PRIORITY
 				y = 0
 				while y < @grapes[i].testables.count
 					@result << @grapes[i].testables[y].name
 					y+=1
 				end	
 
-				#RESULT FOR SIGHT
+			#RESULT FOR SIGHT
 
-				# if not @if_concentration_true
-				# 		@if_color_white_true
-				# 		@if_color_red_true
+				if @if_concentration_present
+					if not @if_concentration_true
+						@result.pop
+					end
+				end
 
-				#RESULT FOR NOSE
-				
-				#COPY PAST PALATE FLAVORS WITH ADJUSTMENT + INTENSITY - KEY
 
-				# RESULT FOR PALATE FLAVORS
+				if @if_color_white_present || @if_color_red_present
+					if not @if_color_white_true || @if_color_red_true
+						@result.pop
+					end
+				end
+
+			#RESULT FOR NOSE
+				if @if_intensity_nose_present
+					if not @if_intensity_nose_true
+						@result.pop
+					end
+				end
+
+				if @if_fruit_nose_present
+					if not @if_fruit_nose_true
+						@result.pop
+					end
+				end	
+
+				if @if_fruit_character_nose_present
+					if not @if_fruit_character_nose_true
+						@result.pop
+					end
+				end
+
+				if @if_non_fruit_nose_present
+					if not @if_non_fruit_nose_true
+						@result.pop
+					end
+				end
+
+				if @if_organic_earth_nose_present
+					if not @if_organic_earth_nose_true
+						@result.pop
+					end
+				end
+
+				if @if_inorganic_earth_nose_present
+					if not @if_inorganic_earth_nose_true
+						@result.pop
+					end
+				end
+
+				if @if_wood_nose_present
+					if not @if_wood_nose_true
+						@result.pop
+					end
+				end
+
+			#RESULT FOR PALATE FLAVORS
 				if @if_fruit_present
 					if not @if_fruit_true
 						@result.pop
@@ -312,13 +376,12 @@ class TestablesController < ApplicationController
 				# 		@result.delete(@grapes[i].testables[y].name)
 				# 	end
 				# end
+			
 			end
 			i+=1
 		end
 		render json: @result
 
-		#FOR TESTING PURPOSES
-		#render json: @if_sediment_true 
 	end
 
 end

@@ -24,6 +24,7 @@ $("#show_nose_div").hide();
 $("#show_flavor_div").hide();
 $("#show_structure_div").hide();
 $("#show_wines_div").hide();
+$("#results").hide();
 
 	$(".nav_li").click(function(){
 		$(".nav_li").removeClass("active");
@@ -34,6 +35,7 @@ $("#show_wines_div").hide();
 		$("#show_flavor_div").hide();
 		$("#show_structure_div").hide();
 		$("#show_wines_div").hide();
+		$("#results").show();
 		$("#"+id).show();
 	});
 
@@ -195,11 +197,10 @@ $("#show_wines_div").hide();
 		palate_flavors["wood"] = palate_flavors_wood;
 
 		//Key element for testable flavor
-		var key_marker = document.getElementById("key_marker").value
-		if (!key_marker == false) { palate_flavors_key.push(key_marker)};
-		palate_flavors["key"] = palate_flavors_key;
-		
-		console.log(palate_structures);
+		//var key_marker = document.getElementById("key_marker").value
+		//if (!key_marker == false) { palate_flavors_key.push(key_marker)};
+		//palate_flavors["key"] = palate_flavors_key;
+
 //AJAX
 		$.ajax({
 		    type: "GET",
@@ -216,6 +217,7 @@ $("#show_wines_div").hide();
 		        for (var i = 0; i < data.length; i++) {
 		        	$("#possible").append("<li>" + data[i] + "</li>");
 		        };
+		        //AJAX for #mistakes
 		    }
 		});
 	});

@@ -42,35 +42,35 @@
 				<p>Concentration</p>
 					<input id="concentration" type="text"
 		              	data-provide="slider"
-		            	data-slider-ticks="[1, 2, 3]"
-		              	data-slider-ticks-labels='["pale", "medium", "deep"]'
-		              	data-slider-min="1"
+		            	data-slider-ticks="[0, 1, 2, 3]"
+		              	data-slider-ticks-labels='[" ", "pale", "medium", "deep"]'
+		              	data-slider-min="0"
 		              	data-slider-max="3"
 		              	data-slider-step="1"
 		              	data-slider-tooltip="hide"
-						data-slider-value="1"
+						data-slider-value="0"
 		              	/>				
 		        <p>Color (White)</p>
 					<input id="color_white" type="text"
 		              	data-provide="slider"
-		            	data-slider-ticks="[1, 2, 3, 4]"
-		              	data-slider-ticks-labels='["water", "straw", "yellow", "gold"]'
-		              	data-slider-min="1"
+		            	data-slider-ticks="[0, 1, 2, 3, 4]"
+		              	data-slider-ticks-labels='["", "water", "straw", "yellow", "gold"]'
+		              	data-slider-min="0"
 		              	data-slider-max="4"
 		              	data-slider-step="1"
 		              	data-slider-tooltip="hide"
-						data-slider-value="1"
+						data-slider-value="0"
 		              	/>
 		        <p>Color (Red)</p>
 					<input id="color_red" type="text"
 		              	data-provide="slider"
-		            	data-slider-ticks="[1, 2, 3, 4]"
-		              	data-slider-ticks-labels='["purple", "ruby", "red", "garnet"]'
-		              	data-slider-min="1"
+		            	data-slider-ticks="[0, 1, 2, 3, 4]"
+		              	data-slider-ticks-labels='["", "purple", "ruby", "red", "garnet"]'
+		              	data-slider-min="0"
 		              	data-slider-max="4"
 		              	data-slider-step="1"
 		              	data-slider-tooltip="hide"
-						data-slider-value="1"
+						data-slider-value="0"
 		              	/>
 		        <p>Secondary Colors</p>
 		        testing in progress...
@@ -579,9 +579,11 @@
 				<h4>Key element?</h4>
 					<div class="row">
 						<div class="inline">
-							<input class="form-control" id="key_marker" placeholder="cedar, meat, olive ...">
+							<input class="form-control" id="disabledInput" type="text" placeholder="Testing in progress..." disabled>
+							<!-- <input class="form-control" id="key_marker" placeholder="cedar, meat, olive ..."> -->
 						</div>
-					</div>				
+					</div>	
+
 			</div>
 			<div id="show_structure_div">
 				<h3 id="middle">Palate Structure</h3>
@@ -660,9 +662,13 @@
 				<%end%>
 			</div>
 		</div>
-		<div class="col-sm-6 text-center">
-			<h3>Results</h3>
+		<div class="col-sm-6 text-center" id="results">
+			<h3 class="text-primary">Results:</h3>
 			<ul id="possible" class="list-unstyled">
+				<!-- AJAX -->
+			</ul>
+			<h5 class="text-primary pad-top">Potential mistakes:</h5>
+			<ul id="mistakes" class="list-unstyled">
 				<!-- AJAX -->
 			</ul>
 		</div>
