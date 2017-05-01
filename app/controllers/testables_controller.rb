@@ -14,22 +14,22 @@ class TestablesController < ApplicationController
 			#SIGHT
 			s = 0
 			while s < @grapes[i].sights.count
-				@if_clarity_true = @grapes[i].sights[s].clarity.include?(params["sight"]["clarity"].to_i)
-				@if_brightness_true = @grapes[i].sights[s].brightness.include?(params["sight"]["brightness"].to_i)
+				#@if_clarity_true = @grapes[i].sights[s].clarity.include?(params["sight"]["clarity"].to_i)
+				#@if_brightness_true = @grapes[i].sights[s].brightness.include?(params["sight"]["brightness"].to_i)
 				@if_concentration_true = @grapes[i].sights[s].concentration.include?(params["sight"]["concentration"].to_i)
 				@if_color_white_true = @grapes[i].sights[s].color.include?(params["sight"]["color_white"].to_i)
 				@if_color_red_true = @grapes[i].sights[s].color.include?(params["sight"]["color_red"].to_i)
-				@if_staining_true = @grapes[i].sights[s].staining.include?(params["sight"]["staining"].to_i)
-				@if_tears_true = @grapes[i].sights[s].tears.include?(params["sight"]["tears"].to_i)
-				if params["sight"]["gas"] && @grapes[i].sights[s].gas
-					@if_gas_true = true
-				end
-				if params["sight"]["sediment"] && @grapes[i].sights[s].sediment
-					@if_sediment_true = true
-				end
-				if params["sight"]["rim"] && @grapes[i].sights[s].rim
-					@if_rim_true = true
-				end
+				#@if_staining_true = @grapes[i].sights[s].staining.include?(params["sight"]["staining"].to_i)
+				#@if_tears_true = @grapes[i].sights[s].tears.include?(params["sight"]["tears"].to_i)
+				# if params["sight"]["gas"] && @grapes[i].sights[s].gas
+				# 	@if_gas_true = true
+				# end
+				# if params["sight"]["sediment"] && @grapes[i].sights[s].sediment
+				# 	@if_sediment_true = true
+				# end
+				# if params["sight"]["rim"] && @grapes[i].sights[s].rim
+				# 	@if_rim_true = true
+				# end
 				s+=1
 			end
 

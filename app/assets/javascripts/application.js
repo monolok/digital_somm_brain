@@ -44,16 +44,16 @@ $("#show_wines_div").hide();
 
 //sight
 		var sight = {};
-		sight["clarity"] = document.getElementById("clarity").value;
-		sight["brightness"] = document.getElementById("brightness").value;
+		//sight["clarity"] = document.getElementById("clarity").value;
+		//sight["brightness"] = document.getElementById("brightness").value;
 		sight["concentration"] = document.getElementById("concentration").value;
 		sight["color_white"] = document.getElementById("color_white").value;
 		sight["color_red"] = document.getElementById("color_red").value;
-		sight["staining"] = document.getElementById("staining").value;
-		sight["tears"] = document.getElementById("tears").value;
-		if (document.getElementById("gas_exist").checked) { sight["gas"] = true};
-		if (document.getElementById("sediment_exist").checked) { sight["sediment"] = true};
-		if (document.getElementById("rim_exist").checked) { sight["rim"] = true };
+		//sight["staining"] = document.getElementById("staining").value;
+		//sight["tears"] = document.getElementById("tears").value;
+		//if (document.getElementById("gas_exist").checked) { sight["gas"] = true};
+		//if (document.getElementById("sediment_exist").checked) { sight["sediment"] = true};
+		//if (document.getElementById("rim_exist").checked) { sight["rim"] = true };
 
 //nose
 		var nose = {};
@@ -198,7 +198,8 @@ $("#show_wines_div").hide();
 		var key_marker = document.getElementById("key_marker").value
 		if (!key_marker == false) { palate_flavors_key.push(key_marker)};
 		palate_flavors["key"] = palate_flavors_key;
-
+		
+		console.log(palate_structures);
 //AJAX
 		$.ajax({
 		    type: "GET",

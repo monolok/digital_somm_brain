@@ -18,7 +18,8 @@
 			<div id="show_sight_div">
 				<h3>Sight</h3>
 				<p>Clarity</p>
-				...
+				testing in progress...
+				<%=fa_icon "cogs 2x"%>
 					<!-- <input id="clarity" type="text"
 		              	data-provide="slider"
 		            	data-slider-ticks="[1, 2, 3]"
@@ -28,7 +29,8 @@
 		              	data-slider-step="1"
 		              	data-slider-tooltip="hide" /> -->
 		        <p>Brightness</p>
-		        ...
+		        testing in progress...
+				<%=fa_icon "cogs 2x"%>
 					<!-- <input id="brightness" type="text"
 		              	data-provide="slider"
 		            	data-slider-ticks="[1, 2, 3, 4]"
@@ -45,7 +47,9 @@
 		              	data-slider-min="1"
 		              	data-slider-max="3"
 		              	data-slider-step="1"
-		              	data-slider-tooltip="hide" />				
+		              	data-slider-tooltip="hide"
+						data-slider-value="1"
+		              	/>				
 		        <p>Color (White)</p>
 					<input id="color_white" type="text"
 		              	data-provide="slider"
@@ -54,7 +58,9 @@
 		              	data-slider-min="1"
 		              	data-slider-max="4"
 		              	data-slider-step="1"
-		              	data-slider-tooltip="hide" />
+		              	data-slider-tooltip="hide"
+						data-slider-value="1"
+		              	/>
 		        <p>Color (Red)</p>
 					<input id="color_red" type="text"
 		              	data-provide="slider"
@@ -63,9 +69,12 @@
 		              	data-slider-min="1"
 		              	data-slider-max="4"
 		              	data-slider-step="1"
-		              	data-slider-tooltip="hide" />
+		              	data-slider-tooltip="hide"
+						data-slider-value="1"
+		              	/>
 		        <p>Secondary Colors</p>
-		        ...
+		        testing in progress...
+				<%=fa_icon "cogs 2x"%>
 					<!-- <input id="secondary_colors" type="text"
 		              	data-provide="slider"
 		            	data-slider-ticks="[1, 2, 3, 4, 5, 6, 7]"
@@ -75,7 +84,8 @@
 		              	data-slider-step="1"
 		              	data-slider-tooltip="hide" /> -->
 				<p>Staining</p>
-				...
+				testing in progress...
+				<%=fa_icon "cogs 2x"%>
 					<!-- <input id="staining" type="text"
 		              	data-provide="slider"
 		            	data-slider-ticks="[1, 2, 3, 4]"
@@ -85,7 +95,8 @@
 		              	data-slider-step="1"
 		              	data-slider-tooltip="hide" /> -->
 		        <p>Tears</p>
-		        ...
+		        testing in progress...
+				<%=fa_icon "cogs 2x"%>
 					<!-- <input id="tears" type="text"
 		              	data-provide="slider"
 		            	data-slider-ticks="[1, 2, 3]"
@@ -98,17 +109,17 @@
 				<div class="row">
 					<div class="inline">
 						<div class="check_box">
-						...
+						<%=fa_icon "cogs"%>
 							<%#= check_box("gas", "exist") %>		
 							<p>Gas Evidence?</p>			
 						</div>
 						<div class="check_box">
-						...
+						<%=fa_icon "cogs"%>
 							<%#= check_box("sediment", "exist") %>
 							<p>Sediment / Particles?</p>	
 						</div>
 						<div class="check_box">
-						...
+						<%=fa_icon "cogs"%>
 							<%#= check_box("rim", "exist") %>
 							<p>Rim Variation?</p>	
 						</div>
@@ -118,7 +129,8 @@
 			<div id="show_nose_div">
 				<h3>Nose</h3>
 				<h4>Clean / Faulty</h4>
-				...
+				testing in progress...
+				<%=fa_icon "cogs 2x"%>
 				<h4>Intensity</h4>
 					<div class="row">
 						<div class="inline">
@@ -137,7 +149,8 @@
 						</div>				
 					</div>
 				<h4>Age Assessment</h4>
-				...
+				testing in progress...
+				<%=fa_icon "cogs 2x"%>
 				<h4>Fruit (White wine)</h4>
 					<div class="row">
 						<div class="inline">
@@ -573,9 +586,11 @@
 			<div id="show_structure_div">
 				<h3 id="middle">Palate Structure</h3>
 				<p>Sweetness</p>
-				...
+				testing in progress...
+				<%=fa_icon "cogs 2x"%>
 				<p>Phenolic / Bitter (White)</p>
-				...
+				testing in progress...
+				<%=fa_icon "cogs 2x"%>
 				<p>Tannin (Red)</p>
 				<input id="tannin" type="text"
 	              	data-provide="slider"
@@ -584,7 +599,9 @@
 	              	data-slider-min="1"
 	              	data-slider-max="5"
 	              	data-slider-step="1"
-	              	data-slider-tooltip="hide" />
+	              	data-slider-tooltip="hide" 
+					data-slider-value="1"
+	              	/>
 
 				<p>Acid</p>
 				<input id="acid" type="text"
@@ -594,7 +611,9 @@
 	              	data-slider-min="1"
 	              	data-slider-max="5"
 	              	data-slider-step="1"
-	              	data-slider-tooltip="hide" />
+	              	data-slider-tooltip="hide"
+					data-slider-value="1"
+	              	/>
 
 				<p>Alcohol</p>
 				<input id="alcohol" type="text"
@@ -604,7 +623,9 @@
 	              	data-slider-min="1"
 	              	data-slider-max="5"
 	              	data-slider-step="1"
-	              	data-slider-tooltip="hide" />
+	              	data-slider-tooltip="hide"
+					data-slider-value="1"
+	              	 />
 
 				<p>Body</p>
 				<input id="body" type="text"
@@ -614,15 +635,21 @@
 	              	data-slider-min="1"
 	              	data-slider-max="5"
 	              	data-slider-step="1"
-	              	data-slider-tooltip="hide" />
+	              	data-slider-tooltip="hide"
+					data-slider-value="1"
+	              	 />
 				<p>Texture</p>
-				...
+				testing in progress...
+				<%=fa_icon "cogs 2x"%>
 				<p>Balance</p>
-				...
+				testing in progress...
+				<%=fa_icon "cogs 2x"%>
 				<p>Length / Finish</p>
-				...
+				testing in progress...
+				<%=fa_icon "cogs 2x"%>
 				<p>Complexity</p>
-				...
+				testing in progress...
+				<%=fa_icon "cogs 2x"%>
 			</div>
 			<div id="show_wines_div">
 				<h3>Wines in database</h3>
