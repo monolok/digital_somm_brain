@@ -144,8 +144,8 @@ $("#results").hide();
 		var palate_flavors_key = [];
 
 		if (document.getElementById("citrus_exist").checked) { palate_flavors_fruit.push("citrus")};
-		if (document.getElementById("apple_pear_exist").checked) { palate_flavors_fruit.push("apple/Pear")};
-		if (document.getElementById("stone_pit_exist").checked) { palate_flavors_fruit.push("stone/Pit")};
+		if (document.getElementById("apple_pear_exist").checked) { palate_flavors_fruit.push("apple/pear")};
+		if (document.getElementById("stone_pit_exist").checked) { palate_flavors_fruit.push("stone/pit")};
 		if (document.getElementById("tropical_exist").checked) { palate_flavors_fruit.push("tropical")};
 		if (document.getElementById("melon_exist").checked) { palate_flavors_fruit.push("melon")};
 		
@@ -173,10 +173,10 @@ $("#results").hide();
 		if (document.getElementById("fermentation_exist").checked) { palate_flavors_non_fruit.push("fermentation")};
 		palate_flavors["non_fruit"] = palate_flavors_non_fruit;
 		
-		if (document.getElementById("forest_floor_exist").checked) { palate_flavors_organic_earth.push("forest Floor")};
+		if (document.getElementById("forest_floor_exist").checked) { palate_flavors_organic_earth.push("forest floor")};
 		if (document.getElementById("compost_exist").checked) { palate_flavors_organic_earth.push("compost")};
 		if (document.getElementById("mushrooms_exist").checked) { palate_flavors_organic_earth.push("mushrooms")};
-		if (document.getElementById("potting_soil_exist").checked) { palate_flavors_organic_earth.push("potting Soil")};
+		if (document.getElementById("potting_soil_exist").checked) { palate_flavors_organic_earth.push("potting soil")};
 		palate_flavors["organic_earth"] = palate_flavors_organic_earth;
 
 		if (document.getElementById("mineral_exist").checked) { palate_flavors_inorganic_earth.push("mineral")};
