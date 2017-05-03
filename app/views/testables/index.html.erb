@@ -1,11 +1,12 @@
 <div class="container">
 	<div class="row">
 		<div class="col-sm-12">
-			<h1>Digital Somm Brain <kbd>BETA</kbd> <%= fa_icon "envelope", class: "text-primary pull-right"%></h1>
+			<h1>Digital Somm Brain <kbd>BETA</kbd> <%= fa_icon "envelope", class: "text-primary pull-right click", "data-toggle"=> "modal", "data-target"=> ".bs-example-modal-sm1"%></h1>
+			<p><%= flash[:notice]%></p>
 		</div>
 	</div>
 	<div class="row">
-		<div id="change" class="col-sm-6 well well-lg">
+		<div id="change" class="col-sm-7 well well-lg">
 			<div>
 				<ul class="nav nav-pills">
 				  <li role="presentation" class="nav_li" id="show_sight">Sight</li>
@@ -664,7 +665,7 @@
 				<%end%>
 			</div>
 		</div>
-		<div class="col-sm-6 text-center" id="results">
+		<div class="col-sm-5 text-center" id="results">
 			<h3 class="text-primary">Results:</h3>
 			<ul id="possible" class="list-unstyled">
 				<!-- AJAX -->
@@ -674,4 +675,42 @@
 			</ul> -->
 		</div>
 	</div>
+	<!-- Footer -->
+    <footer id="footer">
+        <div class="row">
+         	<p>Copyright &copy; DigitalSommBrain <%= Time.now.year%></p>
+        </div>
+    </footer>
 </div>
+
+<!-- Small modal contact form-->
+<div class="modal fade bs-example-modal-sm1" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title">Contact</h4>
+      </div>
+      <%= form_tag(send_path, method: "POST", class: "form-horizontal") do%>
+	      <div class="modal-body">
+	        <div class="form-group">
+	        	<%= label_tag(:subject, "Subject", class: "col-sm-2") %>
+	            <div class="col-sm-10">
+	          		<%= text_field_tag(:subject, content = nil, class: "form-control") %>
+	            </div>
+	        </div>
+	        <div class="form-group">
+	        	<%= label_tag(:message, "Message", class: "col-sm-12") %>
+	          	<div class="col-sm-12">
+	          		<%= text_area_tag(:message, content = nil, class: "form-control") %>
+	          	</div>
+	        </div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button> 
+	        <%= submit_tag 'Send', class: "btn btn-primary" %>        
+	      </div>
+      <%end%>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal compose message -->

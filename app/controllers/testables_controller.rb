@@ -381,8 +381,14 @@ class TestablesController < ApplicationController
 			i+=1
 		end
 		render json: @result
-
 	end
 
+	def sending
+		@subject = params["subject"]
+		@text = params["message"]
+		ContactMailer.send_contact(@subject, @text).deliver_now
+		flash[:notice] = "Mail sent"
+		redirect_to root_path
+	end
 end
 

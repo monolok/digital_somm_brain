@@ -37,6 +37,7 @@ $("#results").hide();
 		$("#show_wines_div").hide();
 		$("#results").show();
 		$("#"+id).show();
+		$("#footer").removeAttr("id");
 	});
 
 
